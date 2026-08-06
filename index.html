@@ -1,73 +1,108 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080c10" />
-    <meta
-      name="description"
-      content="Arvi reúne inteligencia artificial, automatización y formación práctica para negocios, emprendedores y equipos."
-    />
-    <meta property="og:title" content="Arvi | Automatiza, aprende y vive" />
-    <meta
-      property="og:description"
-      content="Encuentra Arvi Agente IA, Arvi Academy, masterclasses y contacto en un solo lugar."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arvi.rohigroup.co/" />
-    <title>Arvi | Automatiza, aprende y vive</title>
-    <link rel="canonical" href="https://arvi.rohigroup.co/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/hub.css" />
-    <script src="/router.js"></script>
-    <script src="/links.js" defer></script>
-    <script src="/hub.js" defer></script>
-  </head>
-  <body>
-    <div class="page-glow" aria-hidden="true"></div>
-    <main class="hub-shell">
-      <header class="profile">
-        <a class="brand" href="/" aria-label="Arvi">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span>arvi<span class="brand-accent">.</span></span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="description" content="Todo Arvi en un solo lugar: agentes de inteligencia artificial, automatización y formación práctica." />
+  <meta property="og:title" content="Arvi | Automatiza y vive" />
+  <meta property="og:description" content="Agentes IA, automatización y formación práctica para recuperar tiempo." />
+  <meta property="og:type" content="website" />
+  <title>Arvi | Automatiza y vive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://app.rohigroup.co" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/hub.css" />
+</head>
+<body>
+  <div class="page-glow page-glow-green" aria-hidden="true"></div>
+  <div class="page-glow page-glow-violet" aria-hidden="true"></div>
 
-        <div class="avatar" aria-hidden="true">
-          <span class="avatar-screen"><i></i><i></i></span>
-          <span class="avatar-signal"></span>
+  <main class="hub-shell">
+    <header class="brand-bar">
+      <a class="brand-link" href="/" aria-label="Inicio de Arvi">
+        <img class="brand-logo" src="https://app.rohigroup.co/brand/logo-arvi.png" alt="Arvi" />
+      </a>
+      <button class="share-button" id="shareButton" type="button" aria-label="Compartir Arvi">
+        <span class="share-icon" aria-hidden="true"></span>
+        <span>Compartir</span>
+      </button>
+      <p class="share-status" id="shareStatus" role="status" aria-live="polite"></p>
+    </header>
+
+    <section class="hero" aria-labelledby="profileTitle">
+      <div class="hero-copy">
+        <p class="eyebrow" id="profileKicker"></p>
+        <h1 id="profileTitle"></h1>
+        <p class="hero-description" id="profileDescription"></p>
+        <p class="brand-promise">Automatiza <span aria-hidden="true">✦</span> y vive.</p>
+      </div>
+
+      <div class="hero-mark" aria-hidden="true">
+        <div class="mark-orbit mark-orbit-one"></div>
+        <div class="mark-orbit mark-orbit-two"></div>
+        <img src="https://app.rohigroup.co/brand/isotipo-arvi.png" alt="" />
+        <span class="pixel pixel-one"></span>
+        <span class="pixel pixel-two"></span>
+        <span class="pixel pixel-three"></span>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featuredTitle">
+      <a class="featured-card tracked-link" id="featuredLink" href="#">
+        <div class="featured-content">
+          <div class="featured-topline">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="featuredEyebrow"></span>
+          </div>
+          <h2 id="featuredTitle"></h2>
+          <p id="featuredDescription"></p>
+          <div class="featured-meta-row">
+            <span id="featuredMeta"></span>
+            <span class="featured-arrow" aria-hidden="true">↗</span>
+          </div>
         </div>
-
-        <p class="profile-kicker" id="profileKicker">IA · Automatización · Formación</p>
-        <h1 id="profileTitle">Tecnología que trabaja contigo, no encima de ti.</h1>
-        <p class="profile-copy" id="profileCopy">
-          Soluciones y formación práctica para organizar tu negocio, responder mejor y recuperar tiempo.
-        </p>
-      </header>
-
-      <section class="featured hidden" id="featuredCard" aria-labelledby="featuredTitle">
-        <div class="featured-topline">
-          <span class="featured-pill" id="featuredBadge">Destacado</span>
-          <span class="featured-arrow" aria-hidden="true">↗</span>
+        <div class="featured-shape" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
         </div>
-        <h2 id="featuredTitle"></h2>
-        <p id="featuredDescription"></p>
-        <a class="featured-button" id="featuredButton" href="#">Abrir</a>
-      </section>
+      </a>
+    </section>
 
-      <section aria-label="Enlaces principales">
-        <div class="links-list" id="linksList"></div>
-      </section>
+    <section class="pathways" aria-labelledby="pathwaysTitle">
+      <div class="section-heading">
+        <p class="section-kicker">Encuentra tu camino</p>
+        <h2 id="pathwaysTitle">¿Qué quieres hacer hoy?</h2>
+      </div>
+      <div class="link-grid" id="links"></div>
+    </section>
 
-      <footer class="hub-footer">
-        <div class="footer-links" id="footerLinks"></div>
-        <p>Una iniciativa de Arvi y Rohi Group.</p>
-        <strong>Automatiza y vive.</strong>
-      </footer>
-    </main>
-  </body>
+    <section class="identity-strip" aria-label="La propuesta de Arvi">
+      <article>
+        <span class="identity-number">01</span>
+        <div><strong>Aprende</strong><p>Tecnología explicada sin enredos.</p></div>
+      </article>
+      <article>
+        <span class="identity-number">02</span>
+        <div><strong>Aplica</strong><p>Soluciones para problemas reales.</p></div>
+      </article>
+      <article>
+        <span class="identity-number">03</span>
+        <div><strong>Automatiza</strong><p>Recupera tiempo para vivir mejor.</p></div>
+      </article>
+    </section>
+
+    <footer class="hub-footer">
+      <div class="footer-brand">
+        <img src="https://app.rohigroup.co/brand/isotipo-arvi.png" alt="" />
+        <div><strong>Arvi</strong><span>Una iniciativa de Rohi Group</span></div>
+      </div>
+      <nav class="footer-links" id="footerLinks" aria-label="Contacto y enlaces secundarios"></nav>
+      <p class="footer-note">Inteligencia artificial con criterio humano.</p>
+    </footer>
+  </main>
+
+  <script src="/links.js" defer></script>
+  <script src="/hub.js" defer></script>
+</body>
 </html>
