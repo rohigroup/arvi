@@ -1,88 +1,102 @@
-window.ARVI_LINKS = {
-  profile: {
-    kicker: 'IA + automatización + formación',
-    title: 'Todo Arvi, en un solo lugar.',
-    description: 'Automatizamos tareas, construimos agentes de inteligencia artificial y enseñamos a usar la tecnología sin enredos.',
+window.ARVI_HUB = {
+  hero: {
+    eyebrow: 'Automatiza y vive',
+    title: 'La tecnología sirve cuando se convierte en una parte útil de tu negocio.',
+    description:
+      'En Arvi reunimos atención con IA, formación práctica y soluciones pensadas para ayudarte a trabajar mejor, responder más rápido y recuperar tiempo.',
   },
+
   featured: {
+    active: true,
     id: 'masterclass-emprendedoras',
-    eyebrow: 'Preinscripciones abiertas',
+    badge: 'Masterclass gratuita',
     title: 'IA para Mujeres Emprendedoras',
-    description: 'Una masterclass práctica para crear contenido, organizar tu negocio y recuperar tiempo usando inteligencia artificial.',
-    meta: 'Virtual · Gratuita · Incluye kit práctico',
-    href: 'https://emprendedoras.academy.arvi.rohigroup.co',
-    external: true,
+    description:
+      'Preinscríbete a la primera ruta activa de Arvi Academy y aprende a crear contenido, organizar tu negocio y liberar tiempo con IA.',
+    cta: 'Quiero participar',
+    href: 'https://emprendedoras.academy.arvi.rohigroup.co/?utm_source=instagram&utm_medium=bio&utm_campaign=arvi_hub',
   },
-  links: [
-    {
-      id: 'whatsapp-automatizacion',
-      icon: 'sparkles',
-      title: 'Quiero automatizar mi negocio',
-      description: 'Cuéntanos qué tarea te quita tiempo y revisamos cómo Arvi puede ayudarte.',
-      href: 'https://wa.me/573183074381?text=Hola%2C%20quiero%20conocer%20c%C3%B3mo%20Arvi%20puede%20automatizar%20mi%20negocio.',
-      external: true,
-      tone: 'primary',
-      eyebrow: 'Hablemos de tu negocio',
-    },
+
+  primaryCards: [
     {
       id: 'arvi-agente',
-      icon: 'bot',
-      title: 'Conoce Arvi Agente IA',
-      description: 'Atiende clientes, organiza conversaciones y apoya tu operación por WhatsApp.',
+      icon: '🤖',
+      title: 'Arvi Agente IA',
+      description:
+        'Atiende clientes, organiza conversaciones y da seguimiento por WhatsApp sin que todo dependa de ti.',
+      meta: ['WhatsApp', 'Seguimiento', 'Atención híbrida'],
       href: '/agente',
-      external: false,
-      tone: 'green',
-      eyebrow: 'Tu equipo digital',
+      cta: 'Conocer Arvi Agente IA',
     },
     {
-      id: 'arvi-academy',
-      icon: 'academy',
-      title: 'Explora Arvi Academy',
-      description: 'Capacitaciones para aplicar la inteligencia artificial al trabajo y al negocio real.',
-      href: 'https://academy.arvi.rohigroup.co',
-      external: true,
-      tone: 'violet',
-      eyebrow: 'Aprende y aplica',
-    },
-    {
-      id: 'nomina',
-      icon: 'payroll',
-      title: 'IA para Nómina y Seguridad Social',
-      description: 'Ruta práctica para profesionales que quieren trabajar más rápido sin perder el control.',
-      href: 'https://nomina.academy.arvi.rohigroup.co',
-      external: true,
-      tone: 'soft',
-      eyebrow: 'En preparación',
+      id: 'academy',
+      icon: '🎓',
+      title: 'Arvi Academy',
+      description:
+        'Capacitaciones prácticas para usar inteligencia artificial y automatización en el trabajo real, sin enredos.',
+      meta: ['Programas', 'Masterclasses', 'Aprendizaje práctico'],
+      href: 'https://academy.arvi.rohigroup.co/?utm_source=instagram&utm_medium=bio&utm_campaign=arvi_hub',
+      cta: 'Explorar Arvi Academy',
     },
     {
       id: 'empresas',
-      icon: 'teams',
-      title: 'Capacitaciones para empresas y equipos',
-      description: 'Diseñamos talleres ajustados a los procesos y retos de tu organización.',
-      href: 'mailto:rohigroupsas@gmail.com?subject=Capacitaci%C3%B3n%20para%20mi%20equipo%20con%20Arvi',
-      external: true,
-      tone: 'soft',
-      eyebrow: 'Programas personalizados',
+      icon: '🏢',
+      title: 'Soluciones para empresas',
+      description:
+        'Formación, acompañamiento y automatizaciones adaptadas al nivel, procesos y necesidades reales de tu equipo.',
+      meta: ['Equipos', 'Capacitación', 'Implementación'],
+      href: 'https://wa.me/573183074381?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20soluciones%20de%20IA%20para%20mi%20empresa%20o%20equipo.',
+      cta: 'Hablar sobre mi empresa',
     },
   ],
-  footer: [
+
+  quickLinks: [
     {
-      id: 'whatsapp',
-      label: 'WhatsApp',
-      href: 'https://wa.me/573183074381',
-      external: true,
+      id: 'automatizar-negocio',
+      icon: '💬',
+      title: 'Quiero automatizar mi negocio',
+      description: 'Cuéntanos qué proceso te está quitando tiempo y revisamos cómo puede ayudarte Arvi.',
+      href: 'https://wa.me/573183074381?text=Hola%2C%20llegu%C3%A9%20desde%20Instagram%20y%20quiero%20saber%20c%C3%B3mo%20automatizar%20mi%20negocio%20con%20Arvi.',
+    },
+    {
+      id: 'nomina',
+      icon: '🧾',
+      title: 'IA para Nómina y Seguridad Social',
+      description: 'Ruta de Arvi Academy para trabajar más rápido sin perder el criterio profesional.',
+      href: 'https://nomina.academy.arvi.rohigroup.co/?utm_source=instagram&utm_medium=bio&utm_campaign=arvi_hub',
+      status: 'En preparación',
     },
     {
       id: 'correo',
-      label: 'Correo',
+      icon: '✉️',
+      title: 'Escríbenos por correo',
+      description: 'Si prefieres una conversación más formal o quieres proponer una alianza.',
       href: 'mailto:rohigroupsas@gmail.com',
-      external: true,
     },
     {
       id: 'rohi-group',
+      icon: '🔗',
+      title: 'Conoce Rohi Group',
+      description: 'La empresa detrás del ecosistema Arvi y otras soluciones tecnológicas aplicadas.',
+      href: 'https://rohigroup.co',
+    },
+  ],
+
+  footerLinks: [
+    {
+      id: 'footer-whatsapp',
+      label: 'WhatsApp',
+      href: 'https://wa.me/573183074381?text=Hola%2C%20llegu%C3%A9%20desde%20Arvi.',
+    },
+    {
+      id: 'footer-academy',
+      label: 'Academy',
+      href: 'https://academy.arvi.rohigroup.co',
+    },
+    {
+      id: 'footer-rohi',
       label: 'Rohi Group',
       href: 'https://rohigroup.co',
-      external: true,
     },
   ],
 };
