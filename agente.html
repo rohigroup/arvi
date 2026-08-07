@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071526">
+  <meta name="description" content="Arvi Agente IA atiende clientes, organiza conversaciones y automatiza procesos por WhatsApp para que tu negocio responda mejor y recupere tiempo.">
+  <title>Arvi Agente IA — Automatiza y vive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #071526;
+      --navy-2: #0a2948;
+      --blue: #003a70;
+      --green: #4ade80;
+      --green-strong: #22c55e;
+      --cyan: #06b6d4;
+      --violet: #7c3aed;
+      --ink: #102033;
+      --muted: #637185;
+      --line: #dce6ef;
+      --soft: #f4f8fb;
+      --white: #ffffff;
+      --shadow: 0 28px 80px rgba(0,0,0,.24);
+      --radius-lg: 28px;
+      --radius-md: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 7%, rgba(74,222,128,.14), transparent 27%),
+        radial-gradient(circle at 88% 10%, rgba(124,58,237,.17), transparent 28%),
+        linear-gradient(150deg, #06101e 0%, #0a2440 54%, #07385b 100%);
+    }
+
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 18px 0;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(6,16,30,.88), rgba(6,16,30,.55));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--white); }
+    .brand-name { font: 800 25px/1 "Poppins", sans-serif; letter-spacing:-.04em; }
+    .product-pill {
+      display:inline-flex; align-items:center; padding:6px 10px; border-radius:999px;
+      background: rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.12);
+      color:#cce1ef; font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .nav-actions { display:flex; align-items:center; gap:12px; }
+    .nav-home { color:#c9dae8; text-decoration:none; font-size:13px; font-weight:800; }
+
+    .button {
+      display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      min-height:46px; padding:12px 19px; border-radius:999px; border:0;
+      text-decoration:none; font-size:14px; font-weight:800; cursor:pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .button:hover { transform:translateY(-1px); }
+    .button-primary { background:var(--green); color:#062111; box-shadow:0 12px 28px rgba(34,197,94,.24); }
+    .button-secondary { background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.15); color:var(--white); }
+
+    .hero {
+      min-height: 680px;
+      display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(36px,7vw,90px);
+      align-items:center; padding:76px 0 86px; color:var(--white);
+    }
+    .eyebrow { color:#92ecfc; font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .hero h1 {
+      margin:14px 0 20px; max-width:760px;
+      font:800 clamp(42px,6vw,76px)/1.01 "Poppins",sans-serif;
+      letter-spacing:-.055em;
+    }
+    .hero h1 span { color:var(--green); }
+    .hero-copy > p { margin:0; max-width:700px; color:#c9dae8; font-size:clamp(17px,2vw,20px); line-height:1.68; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:34px; }
+    .stat {
+      padding:17px; border-radius:18px; background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12); backdrop-filter:blur(10px);
+    }
+    .stat strong { display:block; font:800 25px/1 "Poppins",sans-serif; }
+    .stat span { display:block; margin-top:6px; color:#b9ccdc; font-size:12px; }
+
+    .phone-wrap { position:relative; min-height:470px; display:grid; place-items:center; }
+    .phone-wrap::before, .phone-wrap::after {
+      content:""; position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.13);
+    }
+    .phone-wrap::before { width:390px; height:390px; }
+    .phone-wrap::after { width:300px; height:300px; border-style:dashed; }
+    .phone {
+      position:relative; z-index:2; width:min(330px,88vw); padding:16px; border-radius:34px;
+      background:rgba(255,255,255,.97); color:var(--ink); box-shadow:var(--shadow);
+      transform:rotate(2deg);
+    }
+    .phone-topline { height:6px; border-radius:999px; background:linear-gradient(90deg,var(--green),var(--cyan),var(--violet)); margin-bottom:14px; }
+    .phone-header { display:flex; gap:11px; align-items:center; padding:12px 10px; }
+    .avatar { width:42px; height:42px; display:grid; place-items:center; border-radius:15px; background:#e9f7ee; font-size:21px; }
+    .phone-name { font-weight:800; }
+    .phone-status { color:#168647; font-size:12px; font-weight:700; }
+    .messages { padding:6px 4px 3px; }
+    .msg { display:flex; margin:9px 0; }
+    .msg.out { justify-content:flex-end; }
+    .bubble { max-width:84%; padding:11px 13px; border-radius:14px; font-size:13px; line-height:1.45; }
+    .msg.in .bubble { background:#edf3f7; border-radius:5px 14px 14px 14px; }
+    .msg.out .bubble { background:#e9fbef; color:#175d30; border:1px solid #cef0da; border-radius:14px 5px 14px 14px; }
+    .time { margin-top:3px; color:#8795a4; font-size:10px; }
+    .msg.out .time { text-align:right; }
+
+    .light-section {
+      margin:0 auto 26px; padding:clamp(26px,5vw,54px); border-radius:var(--radius-lg);
+      background:rgba(255,255,255,.975); box-shadow:var(--shadow);
+    }
+    .section-head { display:grid; grid-template-columns:1fr .78fr; gap:34px; align-items:end; margin-bottom:30px; }
+    .section-head h2 { margin:9px 0 0; font:800 clamp(30px,4vw,46px)/1.08 "Poppins",sans-serif; letter-spacing:-.035em; }
+    .section-head p { margin:0; color:var(--muted); line-height:1.68; }
+
+    .accent-line { height:6px; border-radius:999px; background:linear-gradient(90deg,var(--green),var(--cyan),var(--violet)); }
+
+    .problem-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .problem-card, .case-card, .module-card {
+      padding:24px; border:1px solid var(--line); border-radius:var(--radius-md); background:var(--soft);
+    }
+    .problem-card .icon, .case-card .icon { font-size:28px; margin-bottom:16px; }
+    .problem-card h3, .case-card h3, .solution-copy h2, .price-card h3 { font-family:"Poppins",sans-serif; }
+    .problem-card h3, .case-card h3 { margin:0 0 9px; font-size:18px; }
+    .problem-card p, .case-card p { margin:0; color:var(--muted); line-height:1.62; }
+
+    .solution-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:28px; align-items:stretch; }
+    .solution-visual {
+      position:relative; overflow:hidden; min-height:420px; padding:30px; border-radius:var(--radius-md);
+      color:var(--white); background:
+        radial-gradient(circle at 18% 14%, rgba(74,222,128,.15), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(124,58,237,.2), transparent 31%),
+        linear-gradient(150deg,#071526,#0a2948 55%,#07385b);
+    }
+    .solution-visual::after { content:""; position:absolute; inset:auto -80px -100px auto; width:260px; height:260px; border-radius:50%; background:rgba(6,182,212,.12); }
+    .solution-core { position:relative; z-index:2; }
+    .solution-core strong { display:block; margin-top:12px; font:800 34px/1.08 "Poppins",sans-serif; }
+    .solution-core p { color:#c4d6e5; line-height:1.68; }
+    .flow-list { display:grid; gap:11px; margin-top:26px; }
+    .flow-item { display:flex; align-items:flex-start; gap:11px; padding:13px; border-radius:14px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.11); }
+    .flow-dot { width:22px; height:22px; flex:0 0 auto; border-radius:50%; display:grid; place-items:center; background:var(--green); color:#062111; font-size:12px; font-weight:900; }
+
+    .solution-copy { padding:10px 4px; }
+    .solution-copy h2 { margin:12px 0 16px; font-size:clamp(30px,4vw,44px); line-height:1.08; letter-spacing:-.035em; }
+    .solution-copy > p { color:var(--muted); line-height:1.75; }
+    .feature-list { display:grid; gap:12px; margin-top:24px; }
+    .feature { display:grid; grid-template-columns:32px 1fr; gap:12px; align-items:start; padding:14px 0; border-bottom:1px solid var(--line); }
+    .feature:last-child { border-bottom:0; }
+    .check { width:28px; height:28px; display:grid; place-items:center; border-radius:9px; background:#e9fbef; color:#168647; font-weight:900; }
+    .feature strong { display:block; }
+    .feature span { display:block; margin-top:3px; color:var(--muted); font-size:13px; line-height:1.55; }
+
+    .cases-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .case-card { background:#fff; }
+    .case-tag { display:inline-flex; margin-top:16px; padding:7px 10px; border-radius:999px; background:#eef6fa; color:#33506d; font-size:11px; font-weight:800; }
+
+    .pricing-grid { display:grid; grid-template-columns:.86fr 1.14fr; gap:20px; }
+    .price-card { position:relative; overflow:hidden; padding:28px; border:1px solid var(--line); border-radius:var(--radius-md); background:#fff; }
+    .price-card.primary { background:linear-gradient(180deg,#fff,#f7fbfd); }
+    .price-card h3 { margin:18px 0 8px; font-size:25px; }
+    .price-card > p { color:var(--muted); line-height:1.6; }
+    .price-label { display:inline-flex; padding:7px 10px; border-radius:999px; background:#eef6fa; color:#33506d; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.07em; }
+    .price { margin:22px 0 4px; font:800 44px/1 "Poppins",sans-serif; color:var(--green-strong); }
+    .period { color:var(--muted); font-size:13px; }
+    .included { margin-top:24px; display:grid; gap:9px; }
+    .included div { padding:9px 0; border-bottom:1px solid var(--line); font-size:14px; }
+    .included div::before { content:"✓"; margin-right:8px; color:#168647; font-weight:900; }
+    .modules { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-top:20px; }
+    .module-card { padding:15px; }
+    .module-card strong { display:block; font-size:14px; }
+    .module-card span { display:block; margin-top:5px; color:var(--green-strong); font-size:12px; font-weight:800; }
+    .module-card small { color:var(--muted); font-weight:600; }
+    .example { margin-top:16px; padding:15px; border-radius:15px; background:#eefaf2; border:1px solid #d7f0df; color:#43614d; font-size:13px; line-height:1.6; }
+
+    .cta {
+      margin:26px 0; padding:clamp(34px,6vw,68px); text-align:center; color:var(--white);
+      border-radius:var(--radius-lg); border:1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(circle at 50% 120%, rgba(74,222,128,.18), transparent 40%),
+        radial-gradient(circle at 85% 10%, rgba(124,58,237,.16), transparent 27%),
+        linear-gradient(145deg,#06101e,#0a2948 60%,#07385b);
+    }
+    .cta h2 { max-width:760px; margin:10px auto 16px; font:800 clamp(34px,5vw,56px)/1.03 "Poppins",sans-serif; letter-spacing:-.045em; }
+    .cta p { max-width:650px; margin:0 auto 28px; color:#c8d9e9; line-height:1.7; }
+    .cta-note { margin-top:18px !important; color:#aebfd0 !important; font-size:12px; }
+
+    footer { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:22px 4px 36px; color:#c2d2df; }
+    footer strong { color:#fff; font-family:"Poppins",sans-serif; }
+    footer a { color:#c2d2df; text-decoration:none; }
+
+    @media (max-width: 980px) {
+      .hero, .section-head, .solution-grid, .pricing-grid { grid-template-columns:1fr; }
+      .hero { padding:54px 0 68px; }
+      .phone-wrap { min-height:390px; }
+      .problem-grid { grid-template-columns:1fr; }
+      .cases-grid { grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .shell { width:min(100% - 16px,1180px); }
+      .top-nav { padding:13px 0; }
+      .nav-home { display:none; }
+      .product-pill { display:none; }
+      .nav-actions .button { min-height:40px; padding:10px 14px; font-size:12px; }
+      .hero { min-height:auto; padding:42px 0 54px; }
+      .hero h1 { font-size:42px; }
+      .hero-stats { grid-template-columns:1fr; }
+      .phone-wrap { min-height:340px; }
+      .phone-wrap::before { width:300px; height:300px; }
+      .phone-wrap::after { width:230px; height:230px; }
+      .light-section { padding:20px; border-radius:21px; }
+      .section-head h2, .solution-copy h2 { font-size:30px; }
+      .cases-grid, .modules { grid-template-columns:1fr; }
+      .solution-visual { min-height:auto; padding:22px; }
+      .cta { border-radius:21px; padding:40px 20px; }
+      footer { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="/" aria-label="Volver a Arvi">
+        <span class="brand-name">Arvi</span>
+        <span class="product-pill">Agente IA</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-home" href="/">← Ecosistema Arvi</a>
+        <a class="button button-primary" href="#contacto">Hablar con Arvi</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Atención · WhatsApp · Automatización</span>
+        <h1>Tu negocio atendiendo aunque tú <span>no estés pegada al celular.</span></h1>
+        <p>Arvi atiende a tus clientes, agenda citas, responde preguntas y organiza conversaciones por WhatsApp para que tu negocio pueda responder mejor sin depender de ti todo el día.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="button button-primary">Activar Arvi</a>
+          <a href="#como-funciona" class="button button-secondary">Ver cómo funciona</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>24/7</strong><span>Disponible siempre</span></div>
+          <div class="stat"><strong>&lt;3s</strong><span>Tiempo de respuesta</span></div>
+          <div class="stat"><strong>0</strong><span>Días de vacaciones</span></div>
+        </div>
+      </div>
+
+      <aside class="phone-wrap" aria-label="Ejemplo de conversación con Arvi">
+        <div class="phone">
+          <div class="phone-topline"></div>
+          <div class="phone-header">
+            <div class="avatar">🤖</div>
+            <div>
+              <div class="phone-name">Arvi · Tu negocio</div>
+              <div class="phone-status">● en línea ahora</div>
+            </div>
+          </div>
+          <div class="messages">
+            <div class="msg in"><div><div class="bubble">¡Hola! 👋 Quiero agendar una cita para mañana</div><div class="time">2:47 AM</div></div></div>
+            <div class="msg out"><div><div class="bubble">¡Claro! 😊 Tengo disponible a las 10am y 3pm. ¿Cuál prefieres?</div><div class="time">2:47 AM ✓✓</div></div></div>
+            <div class="msg in"><div><div class="bubble">A las 10am perfecto 🙌</div><div class="time">2:48 AM</div></div></div>
+            <div class="msg out"><div><div class="bubble">✅ Listo, te agendé para mañana a las 10am. Te recuerdo 1 hora antes.</div><div class="time">2:48 AM ✓✓</div></div></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="light-section" id="como-funciona">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">El problema</span>
+          <h2>Tu negocio pierde oportunidades cuando WhatsApp depende de una sola persona.</h2>
+        </div>
+        <p>Responder tarde, repetir la misma información y perseguir confirmaciones consume tiempo y también cuesta ventas.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card"><div class="accent-line"></div><div class="icon">😴</div><h3>Mensajes sin responder</h3><p>Los clientes escriben de noche, los fines de semana o en festivos y terminan buscando otra opción antes de recibir respuesta.</p></article>
+        <article class="problem-card"><div class="accent-line"></div><div class="icon">📱</div><h3>Tiempo perdido en WhatsApp</h3><p>Precios, horarios, disponibilidad y servicios se responden una y otra vez, quitándote tiempo para operar o crecer.</p></article>
+        <article class="problem-card"><div class="accent-line"></div><div class="icon">📅</div><h3>Citas que no llegan</h3><p>Sin recordatorios y seguimiento, aparecen olvidos, retrasos y no-shows que terminan afectando directamente los ingresos.</p></article>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="solution-grid">
+        <div class="solution-visual">
+          <div class="solution-core">
+            <span class="eyebrow">Arvi trabajando</span>
+            <strong>Una atención construida alrededor de tu negocio.</strong>
+            <p>Arvi se configura con tu información, tus servicios, tus horarios y la manera en la que quieres atender.</p>
+            <div class="flow-list">
+              <div class="flow-item"><span class="flow-dot">1</span><div><b>El cliente escribe</b><br><small>Arvi entiende qué necesita.</small></div></div>
+              <div class="flow-item"><span class="flow-dot">2</span><div><b>Arvi responde y organiza</b><br><small>Información, disponibilidad y próximos pasos.</small></div></div>
+              <div class="flow-item"><span class="flow-dot">3</span><div><b>Tu equipo conserva el control</b><br><small>Cuando hace falta una persona, la conversación puede escalar.</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="solution-copy">
+          <span class="eyebrow">La solución</span>
+          <h2>Un agente hecho para tu negocio. No otro software genérico.</h2>
+          <p>Arvi trabaja con tu información, tus servicios y tus procesos para convertir WhatsApp en un canal más organizado y útil.</p>
+          <div class="feature-list">
+            <div class="feature"><div class="check">✓</div><div><strong>Responde preguntas frecuentes automáticamente</strong><span>Horarios, precios, servicios y ubicación disponibles sin repetir lo mismo todo el día.</span></div></div>
+            <div class="feature"><div class="check">✓</div><div><strong>Agenda citas y envía recordatorios</strong><span>Ayuda a ordenar la disponibilidad y reducir ausencias con confirmaciones por WhatsApp.</span></div></div>
+            <div class="feature"><div class="check">✓</div><div><strong>Captura leads mientras duermes</strong><span>Cada conversación puede quedar organizada para seguimiento posterior.</span></div></div>
+            <div class="feature"><div class="check">✓</div><div><strong>Se integra con tus sistemas actuales</strong><span>Google Calendar, hojas de cálculo y bases de datos según el caso.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Casos de uso</span>
+          <h2>Arvi se adapta a negocios que viven de conversaciones y seguimiento.</h2>
+        </div>
+        <p>La lógica cambia según cada operación. La idea es automatizar lo repetitivo sin convertir la atención en algo frío.</p>
+      </div>
+      <div class="cases-grid">
+        <article class="case-card"><div class="icon">💅</div><h3>Salones & Spas</h3><p>Agendamiento, catálogo de servicios, recordatorios y confirmación de disponibilidad.</p><span class="case-tag">Agendamiento</span></article>
+        <article class="case-card"><div class="icon">🍽️</div><h3>Restaurantes</h3><p>Reservas, carta digital, pedidos para llevar, confirmaciones y notificaciones.</p><span class="case-tag">Reservas</span></article>
+        <article class="case-card"><div class="icon">🏥</div><h3>Clínicas & Consultorios</h3><p>Citas, preparación de pacientes, recordatorios e información de procedimientos.</p><span class="case-tag">Salud</span></article>
+        <article class="case-card"><div class="icon">🏪</div><h3>Tiendas & Comercios</h3><p>Catálogo, precios, disponibilidad, pedidos y seguimiento de entregas.</p><span class="case-tag">Ventas</span></article>
+        <article class="case-card"><div class="icon">🏋️</div><h3>Gimnasios & Estudios</h3><p>Inscripciones, horarios de clases, pagos y recordatorios.</p><span class="case-tag">Membresías</span></article>
+        <article class="case-card"><div class="icon">🏨</div><h3>Hoteles & Hospedajes</h3><p>Disponibilidad, tarifas, información del hotel y servicios para huéspedes.</p><span class="case-tag">Hospitalidad</span></article>
+        <article class="case-card"><div class="icon">📚</div><h3>Academias & Tutores</h3><p>Inscripción a cursos, horarios, materiales, clases y pagos.</p><span class="case-tag">Educación</span></article>
+        <article class="case-card"><div class="icon">✦</div><h3>¿Tu negocio?</h3><p>Si tus clientes escriben por WhatsApp y hoy hay tareas repetitivas, probablemente hay algo que Arvi puede ordenar.</p><span class="case-tag">Tu proceso</span></article>
+      </div>
+    </section>
+
+    <section class="light-section" id="precios">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Precios</span>
+          <h2>Elige cuánto quieres delegar en Arvi.</h2>
+        </div>
+        <p>Tenemos una opción administrada —donde nosotros implementamos, operamos y acompañamos— y una opción autoadministrada para equipos que prefieren manejarla internamente.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card primary">
+          <div class="accent-line"></div>
+          <span class="price-label">Recomendado</span>
+          <h3>Arvi administrado</h3>
+          <p>Nos encargamos de la implementación, configuración y acompañamiento para que Arvi funcione dentro de tu operación sin que tengas que resolver la parte técnica.</p>
+          <div class="price">$890.000 <small style="font-size:14px;color:var(--muted);font-weight:700;">COP</small></div>
+          <div class="period">implementación + $349.000 COP/mes</div>
+          <div class="example"><b>Primer pago:</b> $1.239.000 COP · <b>Compromiso mínimo:</b> 3 meses · <b>Valor total inicial:</b> $1.937.000 COP.</div>
+          <div class="included">
+            <div>Implementación y configuración inicial</div>
+            <div>Atención y automatizaciones adaptadas al negocio</div>
+            <div>Acompañamiento y soporte</div>
+            <div>1 millón de tokens de IA incluidos al mes</div>
+            <div>Salida a una persona cuando haga falta</div>
+          </div>
+        </article>
+
+        <article class="price-card">
+          <div class="accent-line"></div>
+          <span class="price-label">Pago único</span>
+          <h3>Arvi autoadministrado</h3>
+          <p>Te entregamos la solución configurada para que tu equipo la administre directamente, sin mensualidad de servicio.</p>
+          <div class="price">$2.490.000 <small style="font-size:14px;color:var(--muted);font-weight:700;">COP</small></div>
+          <div class="period">pago único · sin mensualidad de administración</div>
+          <div class="included">
+            <div>Configuración inicial de la solución</div>
+            <div>Entrega para administración interna</div>
+            <div>1 millón de tokens de IA iniciales</div>
+            <div>Documentación básica de operación</div>
+          </div>
+          <div class="example"><b>Extras e integraciones:</b> se cotizan según alcance, volumen y complejidad del proceso.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <span class="eyebrow">Automatiza y vive</span>
+      <h2>Haz que WhatsApp deje de depender de ti todo el día.</h2>
+      <p>Cuéntanos cómo funciona tu negocio y revisamos qué parte de la atención, el seguimiento o el agendamiento puede asumir Arvi.</p>
+      <a href="https://wa.me/573183074381?text=Hola!%20Quiero%20informaci%C3%B3n%20sobre%20Arvi%20para%20mi%20negocio" target="_blank" rel="noopener" class="button button-primary">Escribir a WhatsApp</a>
+      <p class="cta-note">Plan administrado con compromiso mínimo de 3 meses · Soporte incluido</p>
+    </section>
+
+    <footer>
+      <div><strong>Arvi · Agente IA</strong><br><small>Una iniciativa de Arvi y Rohi Group.</small></div>
+      <div><a href="/">Ecosistema Arvi</a> · <a href="https://academy.arvi.rohigroup.co">Arvi Academy</a> · <a href="https://rohigroup.co" target="_blank" rel="noopener">Rohi Group</a></div>
+    </footer>
+  </main>
+</body>
+</html>
