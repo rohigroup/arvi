@@ -29,6 +29,14 @@
       "destination": "/salones/index.html"
     },
     {
+      "source": "/firmas-contables",
+      "destination": "/firmas-contables/index.html"
+    },
+    {
+      "source": "/firmas-contables/",
+      "destination": "/firmas-contables/index.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     }
