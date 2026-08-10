@@ -21,6 +21,14 @@
       "destination": "/agente.html"
     },
     {
+      "source": "/salones",
+      "destination": "/salones/index.html"
+    },
+    {
+      "source": "/salones/",
+      "destination": "/salones/index.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     }
