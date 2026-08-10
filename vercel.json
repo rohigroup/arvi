@@ -37,6 +37,14 @@
       "destination": "/firmas-contables/index.html"
     },
     {
+      "source": "/contadores",
+      "destination": "/contadores/index.html"
+    },
+    {
+      "source": "/contadores/",
+      "destination": "/contadores/index.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     }
