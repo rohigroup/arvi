@@ -45,6 +45,14 @@
       "destination": "/contadores/index.html"
     },
     {
+      "source": "/consultorios",
+      "destination": "/consultorios/index.html"
+    },
+    {
+      "source": "/consultorios/",
+      "destination": "/consultorios/index.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     }
