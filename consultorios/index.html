@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0B1424">
+  <title>ARVI para Consultorios | Más tiempo para el paciente</title>
+  <meta name="description" content="ARVI ayuda a consultorios a responder información administrativa, organizar solicitudes de cita, confirmar, recordar y dar continuidad por WhatsApp para reducir interrupciones al equipo profesional.">
+  <meta property="og:title" content="ARVI para Consultorios">
+  <meta property="og:description" content="Más tiempo para el paciente. Menos tiempo para el celular.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#003A70;--green:#22C55E;--violet:#7C3AED;--cyan:#06B6D4;--ink:#0B1424;--paper:#F8FAFC;--white:#fff;--muted:#64748B;--line:rgba(11,20,36,.10);--shadow:0 24px 70px rgba(11,20,36,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}h1,h2,h3{font-family:"Plus Jakarta Sans",Inter,sans-serif;margin:0;letter-spacing:-.045em}
+    .nav{position:absolute;inset:0 0 auto;z-index:20;padding:18px 0}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand-logo{width:132px;height:48px;overflow:hidden;display:block}.brand-logo img{width:132px;height:89px;object-fit:cover;object-position:center;transform:translateY(-20px)}.nav-link{color:rgba(255,255,255,.78);font-size:14px;font-weight:700}
+    .hero{position:relative;overflow:hidden;min-height:790px;display:flex;align-items:center;color:#fff;background:radial-gradient(circle at 78% 18%,rgba(6,182,212,.18),transparent 28%),radial-gradient(circle at 91% 78%,rgba(124,58,237,.18),transparent 31%),linear-gradient(145deg,#07111F 0%,#0B1424 52%,#003A70 120%);padding:122px 0 86px}.hero:after{content:"";position:absolute;inset:auto -12% -35% 40%;height:590px;background:radial-gradient(ellipse,rgba(34,197,94,.10),transparent 65%);pointer-events:none}.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.07fr .93fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#A8ECF5;margin-bottom:22px}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 6px rgba(34,197,94,.11)}h1{font-size:clamp(46px,5.7vw,76px);line-height:.99;max-width:760px}.hero-copy{font-size:18px;line-height:1.68;color:rgba(255,255,255,.76);max-width:660px;margin:25px 0 28px}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:15px 21px;font-weight:800;font-size:14px;border:1px solid transparent;transition:.18s ease;cursor:pointer}.btn-primary{background:var(--green);color:#062411;box-shadow:0 12px 30px rgba(34,197,94,.23)}.btn-primary:hover{transform:translateY(-2px)}.btn-secondary{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff}.micro{margin-top:19px;color:rgba(255,255,255,.56);font-size:13px;font-weight:600}
+    .desk{position:relative;min-height:590px;display:grid;place-items:center}.mascot{position:absolute;z-index:5;width:275px;right:-10px;bottom:-3px;filter:drop-shadow(0 24px 35px rgba(0,0,0,.28))}.inbox{position:relative;z-index:3;width:min(100%,430px);margin-right:90px;padding:18px;border:1px solid rgba(255,255,255,.16);border-radius:30px;background:rgba(255,255,255,.95);color:var(--ink);box-shadow:0 32px 95px rgba(0,0,0,.32)}.inbox-head{display:flex;align-items:center;justify-content:space-between;padding:5px 5px 16px}.inbox-head strong{font-family:"Plus Jakarta Sans";font-size:15px}.live{font-size:10px;font-weight:800;letter-spacing:.08em;color:#15803D;background:#DCFCE7;border-radius:999px;padding:7px 9px}.thread{padding:16px;border:1px solid #E4EBF1;border-radius:18px;background:#fff;margin-top:10px}.thread p{margin:0;font-weight:700;font-size:13px;line-height:1.45}.tag{display:inline-flex;margin-top:11px;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:800;color:var(--blue);background:#EEF6FF}.tag.green{color:#15803D;background:#DCFCE7}.tag.violet{color:#6D28D9;background:#F1EAFE}.brand-line{position:absolute;z-index:7;left:-18px;bottom:36px;width:240px;padding:14px 15px;border-radius:17px;background:#fff;color:var(--ink);box-shadow:var(--shadow);font-family:"Plus Jakarta Sans";font-size:14px;font-weight:800;line-height:1.3}.brand-line span{color:var(--blue)}
+    section{padding:98px 0}.section-kicker{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}.section-title{font-size:clamp(34px,4.5vw,58px);line-height:1.04;max-width:900px}.section-lead{font-size:17px;line-height:1.72;color:var(--muted);max-width:750px;margin:20px 0 0}
+    .problem{background:#fff}.problem-grid{margin-top:46px;display:grid;grid-template-columns:repeat(5,1fr);gap:11px}.question-card{padding:23px 19px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(180deg,#fff,#F8FAFC);min-height:145px;display:flex;flex-direction:column;justify-content:space-between}.question-card span{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:.05em}.question-card p{margin:18px 0 0;font-weight:800;line-height:1.35}.problem-punch{margin-top:32px;padding:28px 30px;border-radius:24px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.problem-punch strong{font-family:"Plus Jakarta Sans";font-size:clamp(23px,2.8vw,37px);letter-spacing:-.04em;max-width:670px}.problem-punch p{margin:0;color:rgba(255,255,255,.64);max-width:360px;line-height:1.62}
+    .flow{background:linear-gradient(180deg,#F8FAFC,#F2F7FB)}.flow-intro{display:grid;grid-template-columns:1.13fr .87fr;gap:48px;align-items:center}.work-card{min-height:310px;position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(145deg,#071526,#003A70);box-shadow:var(--shadow)}.work-card:before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(6,182,212,.19);right:-80px;top:-80px}.work-card img{position:absolute;width:320px;right:5px;bottom:-15px;filter:drop-shadow(0 20px 28px rgba(0,0,0,.2))}.work-label{position:absolute;z-index:3;left:24px;top:24px;max-width:180px;color:#fff;font-family:"Plus Jakarta Sans";font-weight:800;font-size:18px;line-height:1.2}.work-label span{display:block;margin-top:8px;color:#8BE8F4;font-family:Inter;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.flow-track{margin-top:54px;display:grid;grid-template-columns:repeat(6,1fr);position:relative;gap:11px}.flow-track:before{content:"";position:absolute;top:29px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,var(--cyan),var(--green),var(--violet));opacity:.5}.flow-step{position:relative;z-index:1;text-align:center}.flow-icon{width:58px;height:58px;border-radius:19px;margin:0 auto 13px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 28px rgba(11,20,36,.06);display:grid;place-items:center;font-family:"Plus Jakarta Sans";font-weight:800;color:var(--blue)}.flow-step h3{font-size:14px;letter-spacing:-.02em}.flow-step p{font-size:12px;line-height:1.5;color:var(--muted);margin:7px auto 0;max-width:150px}.flow-quote{text-align:center;font-family:"Plus Jakarta Sans";font-size:clamp(27px,3.5vw,45px);font-weight:800;letter-spacing:-.045em;max-width:920px;margin:60px auto 0}.flow-quote em{font-style:normal;color:var(--blue)}
+    .usecases{background:#fff}.cases-grid{margin-top:46px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.case{padding:27px;border:1px solid var(--line);border-radius:23px;background:#fff;transition:.18s ease}.case:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(11,20,36,.07)}.case-num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#EEF6FF;color:var(--blue);font-family:"Plus Jakarta Sans";font-size:11px;font-weight:800;margin-bottom:17px}.case h3{font-size:20px}.case p{margin:10px 0 0;color:var(--muted);line-height:1.65;font-size:14px}
+    .results{background:var(--ink);color:#fff;overflow:hidden;position:relative}.results:before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;background:rgba(6,182,212,.12);filter:blur(20px);right:-180px;top:-230px}.results .section-kicker{color:#75E5F5}.results .section-lead{color:rgba(255,255,255,.62)}.results-grid{margin-top:46px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.result-card{padding:27px;border:1px solid rgba(255,255,255,.12);border-radius:23px;background:rgba(255,255,255,.055)}.result-card .num{font-family:"Plus Jakarta Sans";font-size:12px;font-weight:800;color:#86EFAC;margin-bottom:21px}.result-card h3{font-size:21px}.result-card p{margin:10px 0 0;color:rgba(255,255,255,.6);line-height:1.65;font-size:13px}.big-line{margin:58px 0 0;border-top:1px solid rgba(255,255,255,.11);padding-top:40px;font-family:"Plus Jakarta Sans";font-weight:800;font-size:clamp(29px,4vw,52px);line-height:1.05;max-width:980px}.big-line span{color:#86EFAC}
+    .control{background:#fff}.control-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:62px;align-items:center}.control-panel{padding:32px;border:1px solid var(--line);border-radius:29px;background:linear-gradient(145deg,#F7FAFC,#EEF6FF);box-shadow:var(--shadow)}.control-row{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}.control-row:last-child{border-bottom:0}.check{flex:0 0 31px;width:31px;height:31px;border-radius:10px;background:#DCFCE7;color:#15803D;display:grid;place-items:center;font-weight:900}.control-row h3{font-size:15px;letter-spacing:-.02em}.control-row p{margin:6px 0 0;font-size:13px;color:var(--muted);line-height:1.55}.control-copy .quote{font-family:"Plus Jakarta Sans";font-size:clamp(31px,4vw,50px);font-weight:800;line-height:1.06;letter-spacing:-.045em;margin:21px 0}.control-copy .quote span{color:var(--blue)}
+    .cta{padding:110px 0;background:linear-gradient(145deg,#003A70,#06223E 70%,#0B1424);color:#fff;text-align:center}.cta .section-title{margin-inline:auto;max-width:870px}.cta p{max-width:680px;margin:21px auto 29px;color:rgba(255,255,255,.68);font-size:17px;line-height:1.72}.cta .btn{font-size:15px;padding:16px 24px}.cta-note{font-size:12px!important;margin-top:15px!important;color:rgba(255,255,255,.45)!important}footer{background:#07111F;color:rgba(255,255,255,.56);padding:28px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-logo{width:94px;height:34px;overflow:hidden}.footer-logo img{width:94px;height:64px;object-fit:cover;object-position:center;transform:translateY(-15px)}.reveal{opacity:0;transform:translateY(17px);transition:.6s ease}.reveal.on{opacity:1;transform:none}
+    @media(max-width:980px){.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;gap:46px}.desk{max-width:650px;width:100%;margin-inline:auto}.problem-grid{grid-template-columns:repeat(3,1fr)}.flow-intro{grid-template-columns:1fr}.work-card{max-width:600px;width:100%;min-height:300px}.flow-track{grid-template-columns:repeat(3,1fr);row-gap:32px}.flow-track:before{display:none}.cases-grid{grid-template-columns:repeat(2,1fr)}.results-grid{grid-template-columns:repeat(2,1fr)}.control-grid{grid-template-columns:1fr;gap:40px}}
+    @media(max-width:680px){.wrap{width:min(100% - 28px,1160px)}.nav{padding:15px 0}.brand-logo{width:108px;height:42px}.brand-logo img{width:108px;height:73px;transform:translateY(-16px)}.nav-link{display:none}.hero{padding:98px 0 66px}.hero-grid{gap:42px}h1{font-size:44px}.hero-copy{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.desk{min-height:610px;display:block}.inbox{width:93%;margin:0;position:relative;top:45px}.mascot{width:210px;right:-15px;bottom:-10px}.brand-line{left:4px;bottom:20px;width:205px;font-size:12px}section{padding:74px 0}.section-title{font-size:35px}.section-lead{font-size:16px}.problem-grid{grid-template-columns:1fr 1fr;gap:9px}.question-card{padding:18px 15px;min-height:126px}.question-card:last-child{grid-column:1/-1;min-height:auto}.problem-punch{padding:25px 21px;flex-direction:column;align-items:flex-start}.problem-punch p{font-size:14px}.work-card{min-height:260px}.work-card img{width:270px;right:-30px}.work-label{font-size:16px;max-width:145px}.flow-track{grid-template-columns:1fr 1fr;gap:25px 10px}.flow-icon{width:51px;height:51px;border-radius:16px}.flow-quote{margin-top:46px;font-size:29px}.cases-grid,.results-grid{grid-template-columns:1fr}.case,.result-card{padding:23px}.big-line{margin-top:43px;padding-top:32px;font-size:30px}.control-panel{padding:21px}.control-copy .quote{font-size:33px}.cta{padding:80px 0}.cta p{font-size:16px}.footer-inner{flex-direction:column;text-align:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="nav"><div class="wrap nav-inner"><a class="brand-logo" href="/" aria-label="ARVI inicio"><img src="/assets/arvi/logo.webp" alt="ARVI"></a><a class="nav-link" href="#como-funciona">Cómo funciona</a></div></header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i></i> ARVI para Consultorios</div>
+          <h1>Tu consultorio no debería gastar tiempo clínico respondiendo lo administrativo.</h1>
+          <p class="hero-copy">ARVI ayuda a responder información administrativa, organizar solicitudes de cita, confirmar, recordar y dar continuidad por WhatsApp para que el profesional pueda concentrarse en el paciente.</p>
+          <div class="hero-actions"><a class="btn btn-primary js-track" href="https://wa.me/573183074381?text=Hola%2C%20vi%20ARVI%20para%20Consultorios%20y%20quiero%20conocer%20c%C3%B3mo%20podr%C3%ADa%20funcionar%20en%20mi%20consultorio." target="_blank" rel="noopener noreferrer">Quiero verlo en mi consultorio <span aria-hidden="true">→</span></a><a class="btn btn-secondary" href="#como-funciona">Ver cómo funciona</a></div>
+          <div class="micro">Más tiempo para el paciente. Menos tiempo para el celular.</div>
+        </div>
+        <div class="desk">
+          <div class="inbox">
+            <div class="inbox-head"><strong>Conversaciones administrativas</strong><span class="live">EN PROCESO</span></div>
+            <article class="thread"><p>“¿Cuál es el valor de la consulta?”</p><span class="tag">Información</span></article>
+            <article class="thread"><p>“¿Tienen disponibilidad esta semana?”</p><span class="tag green">Cita</span></article>
+            <article class="thread"><p>“¿Cómo agendo mi control?”</p><span class="tag violet">Continuidad</span></article>
+          </div>
+          <img class="mascot" src="/assets/arvi/mascota-trabajando.webp" alt="Mascota oficial de ARVI trabajando">
+          <div class="brand-line">ARVI atiende lo administrativo. <span>El profesional conserva lo clínico.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap reveal">
+        <div class="section-kicker">El costo invisible</div>
+        <h2 class="section-title">Una pregunta parece pequeña. Decenas al día interrumpen la consulta.</h2>
+        <p class="section-lead">No todo mensaje necesita criterio clínico, pero sí necesita una respuesta clara y continuidad. Cuando todo termina en el celular del profesional o de una sola persona, la atención se fragmenta.</p>
+        <div class="problem-grid">
+          <article class="question-card"><span>VALOR</span><p>“¿Cuánto cuesta la consulta?”</p></article>
+          <article class="question-card"><span>AGENDA</span><p>“¿Tienen cita esta semana?”</p></article>
+          <article class="question-card"><span>UBICACIÓN</span><p>“¿Dónde atienden?”</p></article>
+          <article class="question-card"><span>CAMBIO</span><p>“¿Puedo mover mi cita?”</p></article>
+          <article class="question-card"><span>CONTROL</span><p>“¿Cómo agendo el control?”</p></article>
+        </div>
+        <div class="problem-punch"><strong>No toda conversación necesita tiempo clínico. Pero sí necesita continuidad.</strong><p>La oportunidad es separar lo administrativo de lo profesional sin perder cercanía con el paciente.</p></div>
+      </div>
+    </section>
+
+    <section class="flow" id="como-funciona">
+      <div class="wrap reveal">
+        <div class="flow-intro">
+          <div><div class="section-kicker">Cómo cambia con ARVI</div><h2 class="section-title">ARVI acompaña el recorrido administrativo antes y después de la consulta.</h2><p class="section-lead">El consultorio define la información y el proceso. ARVI sostiene la parte repetitiva y el equipo profesional entra cuando la conversación necesita criterio, revisión o una decisión clínica.</p></div>
+          <div class="work-card"><div class="work-label">No es un bot. Es tu equipo.<span>ARVI trabajando</span></div><img src="/assets/arvi/mascota-trabajando.webp" alt="Mascota oficial de ARVI trabajando"></div>
+        </div>
+        <div class="flow-track">
+          <div class="flow-step"><div class="flow-icon">01</div><h3>Pregunta</h3><p>Valor, ubicación, horarios y dudas administrativas.</p></div>
+          <div class="flow-step"><div class="flow-icon">02</div><h3>Orientación</h3><p>Información definida por el consultorio.</p></div>
+          <div class="flow-step"><div class="flow-icon">03</div><h3>Solicitud</h3><p>Se organiza la intención de cita o control.</p></div>
+          <div class="flow-step"><div class="flow-icon">04</div><h3>Confirmación</h3><p>Recordatorios y cambios con un proceso claro.</p></div>
+          <div class="flow-step"><div class="flow-icon">05</div><h3>Consulta</h3><p>El profesional se concentra en el paciente.</p></div>
+          <div class="flow-step"><div class="flow-icon">06</div><h3>Continuidad</h3><p>Próximos pasos administrativos y controles.</p></div>
+        </div>
+        <div class="flow-quote">ARVI atiende lo administrativo. <em>El profesional conserva lo clínico.</em></div>
+      </div>
+    </section>
+
+    <section class="usecases">
+      <div class="wrap reveal">
+        <div class="section-kicker">Dónde empieza a quitar carga</div>
+        <h2 class="section-title">La experiencia puede ser más fluida sin convertir la atención médica en una conversación automática.</h2>
+        <div class="cases-grid">
+          <article class="case"><div class="case-num">01</div><h3>Información administrativa</h3><p>Valor, ubicación, horarios, medios de atención y otra información que el consultorio haya definido.</p></article>
+          <article class="case"><div class="case-num">02</div><h3>Solicitudes de cita</h3><p>La intención puede quedar organizada para facilitar el siguiente paso sin interrumpir una consulta.</p></article>
+          <article class="case"><div class="case-num">03</div><h3>Confirmaciones y recordatorios</h3><p>La continuidad no tiene que depender de revisar uno por uno los chats pendientes.</p></article>
+          <article class="case"><div class="case-num">04</div><h3>Reprogramaciones</h3><p>Las solicitudes de cambio pueden seguir un recorrido claro y dejar al equipo las excepciones.</p></article>
+          <article class="case"><div class="case-num">05</div><h3>Preparación definida por el profesional</h3><p>Instrucciones administrativas o previas que el consultorio haya aprobado pueden comunicarse de forma consistente.</p></article>
+          <article class="case"><div class="case-num">06</div><h3>Controles y continuidad</h3><p>El seguimiento administrativo puede ayudar a que próximos pasos y controles no se pierdan entre conversaciones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="wrap reveal">
+        <div class="section-kicker">Lo que buscamos cambiar</div>
+        <h2 class="section-title">Más continuidad para el paciente. Menos interrupciones para el consultorio.</h2>
+        <p class="section-lead">ARVI no busca reemplazar la relación profesional. Busca quitar carga administrativa repetitiva para que el tiempo clínico vuelva a estar donde genera más valor.</p>
+        <div class="results-grid">
+          <article class="result-card"><div class="num">01</div><h3>Menos celular</h3><p>La atención administrativa no depende de responder cada mensaje personalmente.</p></article>
+          <article class="result-card"><div class="num">02</div><h3>Más continuidad</h3><p>El paciente entiende mejor qué sigue antes y después de su cita.</p></article>
+          <article class="result-card"><div class="num">03</div><h3>Menos interrupciones</h3><p>El equipo profesional puede proteger mejor el tiempo de consulta.</p></article>
+          <article class="result-card"><div class="num">04</div><h3>Control humano</h3><p>Las conversaciones que necesitan criterio profesional siguen llegando a una persona responsable.</p></article>
+        </div>
+        <div class="big-line">Más tiempo para el paciente. <span>Menos tiempo para el celular.</span></div>
+      </div>
+    </section>
+
+    <section class="control">
+      <div class="wrap control-grid reveal">
+        <div class="control-panel">
+          <div class="control-row"><div class="check">✓</div><div><h3>Información definida por el consultorio</h3><p>ARVI trabaja con respuestas, servicios y recorridos que el negocio haya aprobado.</p></div></div>
+          <div class="control-row"><div class="check">✓</div><div><h3>Administrativo primero</h3><p>Citas, información, recordatorios y continuidad pueden resolverse sin consumir tiempo clínico.</p></div></div>
+          <div class="control-row"><div class="check">✓</div><div><h3>Lo clínico sigue siendo humano</h3><p>Evaluación, decisiones, recomendaciones y criterio profesional permanecen con el equipo responsable.</p></div></div>
+        </div>
+        <div class="control-copy"><div class="section-kicker">Control humano</div><div class="quote">La tecnología acompaña la experiencia. <span>El vínculo clínico sigue siendo del profesional con su paciente.</span></div><p class="section-lead">ARVI ayuda a sostener la parte administrativa para que el consultorio pueda estar más presente donde realmente importa.</p></div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="wrap reveal">
+        <div class="section-kicker" style="color:#86EFAC">Automatiza y vive.</div>
+        <h2 class="section-title">¿Qué parte administrativa te quita más tiempo en tu consultorio?</h2>
+        <p>Cuéntanos cómo manejas hoy la atención, las citas y el seguimiento por WhatsApp. En una conversación corta identificamos por dónde empezar sin tocar lo que requiere criterio clínico.</p>
+        <a class="btn btn-primary js-track" href="https://wa.me/573183074381?text=Hola%2C%20vi%20ARVI%20para%20Consultorios%20y%20quiero%20conocer%20c%C3%B3mo%20podr%C3%ADa%20funcionar%20en%20mi%20consultorio." target="_blank" rel="noopener noreferrer">Quiero conocer ARVI <span aria-hidden="true">→</span></a>
+        <p class="cta-note">Sin compromiso. Primero entendemos cómo trabaja hoy tu consultorio.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="footer-logo" href="/" aria-label="ARVI"><img src="/assets/arvi/logo.webp" alt="ARVI"></a><div>ARVI · una solución de Rohi Group</div></div></footer>
+  <script>
+    const io='IntersectionObserver' in window?new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.12}):null;
+    document.querySelectorAll('.reveal').forEach(el=>io?io.observe(el):el.classList.add('on'));
+    document.querySelectorAll('.js-track').forEach(el=>el.addEventListener('click',()=>{const payload=JSON.stringify({id:'consultorios_whatsapp',path:location.pathname,source:'landing_consultorios',target:el.href});if(navigator.sendBeacon){navigator.sendBeacon('/api/click',new Blob([payload],{type:'application/json'}));}else{fetch('/api/click',{method:'POST',headers:{'Content-Type':'application/json'},body:payload,keepalive:true}).catch(()=>{});}}));
+  </script>
+</body>
+</html>
