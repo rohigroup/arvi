@@ -21,6 +21,38 @@
       "destination": "/agente.html"
     },
     {
+      "source": "/salones",
+      "destination": "/salones/index.html"
+    },
+    {
+      "source": "/salones/",
+      "destination": "/salones/index.html"
+    },
+    {
+      "source": "/firmas-contables",
+      "destination": "/firmas-contables/index.html"
+    },
+    {
+      "source": "/firmas-contables/",
+      "destination": "/firmas-contables/index.html"
+    },
+    {
+      "source": "/contadores",
+      "destination": "/contadores/index.html"
+    },
+    {
+      "source": "/contadores/",
+      "destination": "/contadores/index.html"
+    },
+    {
+      "source": "/consultorios",
+      "destination": "/consultorios/index.html"
+    },
+    {
+      "source": "/consultorios/",
+      "destination": "/consultorios/index.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     }
