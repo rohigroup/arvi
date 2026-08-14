@@ -7,6 +7,16 @@
   },
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "diagnostico.arvi.rohigroup.co"
+        }
+      ],
+      "destination": "/diagnostico.html"
+    },
+    {
       "source": "/:path*",
       "has": [
         {
