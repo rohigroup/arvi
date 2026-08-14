@@ -1,4 +1,5 @@
 (() => {
+  // Route branded subdomains to their dedicated entrypoints.
   const hostname = window.location.hostname.toLowerCase();
   const path = window.location.pathname;
 
