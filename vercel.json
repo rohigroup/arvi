@@ -5,6 +5,19 @@
       "maxDuration": 5
     }
   },
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "diagnostico.arvi.rohigroup.co"
+        }
+      ],
+      "destination": "/diagnostico",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
