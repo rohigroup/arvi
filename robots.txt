@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arvi.rohigroup.co/sitemap.xml
