@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": { "api/click.js": { "maxDuration": 5 } },
+  "functions": {
+    "api/click.js": { "maxDuration": 5 },
+    "api/diagnostico.js": { "maxDuration": 5 }
+  },
   "redirects": [
     {
       "source": "/",
@@ -10,9 +13,9 @@
     }
   ],
   "rewrites": [
-    { "source": "/", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/diagnostico.html" },
-    { "source": "/:path*", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/diagnostico.html" },
-    { "source": "/:path*", "has": [{ "type": "host", "value": "agente.arvi.rohigroup.co" }], "destination": "/agente.html" },
+    { "source": "/", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "agente.arvi.rohigroup.co" }], "destination": "/agente-v2.html" },
     { "source": "/chatbot-whatsapp-ia", "destination": "/chatbot-whatsapp-ia.html" },
     { "source": "/agentes-ia", "destination": "/agentes-ia.html" },
     { "source": "/automatizacion-procesos", "destination": "/automatizacion-procesos.html" },
@@ -27,8 +30,8 @@
     { "source": "/recursos/automatizar-citas-whatsapp", "destination": "/recursos/automatizar-citas-whatsapp.html" },
     { "source": "/precios", "destination": "/precios.html" },
     { "source": "/calculadora-roi", "destination": "/calculadora-roi.html" },
-    { "source": "/agente", "destination": "/agente.html" },
-    { "source": "/diagnostico", "destination": "/diagnostico.html" },
+    { "source": "/agente", "destination": "/agente-v2.html" },
+    { "source": "/diagnostico", "destination": "/api/diagnostico" },
     { "source": "/links", "destination": "/links.html" },
     { "source": "/", "destination": "/index.html" }
   ],
