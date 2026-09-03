@@ -1,36 +1,43 @@
-# Arvi Hub
+# ARVI — sitio público
 
-Portal público de enlaces de Arvi y landing comercial de Arvi Agente IA.
+Sitio comercial y de posicionamiento orgánico de ARVI, la línea de automatización con inteligencia artificial de Rohi Group.
 
-## Rutas
+## Objetivo
 
-- `/` — hub móvil para usar como enlace principal en Instagram.
-- `/agente` — landing comercial de Arvi Agente IA.
-- `agente.arvi.rohigroup.co` — redirige internamente a `/agente` cuando el dominio se conecte.
+La raíz `arvi.rohigroup.co` funciona como sitio comercial e indexable. La arquitectura busca que personas, buscadores y sistemas de IA puedan entender con claridad qué es ARVI, qué problemas resuelve y en qué categorías compite.
 
-## Editar botones
+## Rutas comerciales
 
-Los textos, estados y enlaces del hub se administran en `links.js`.
+- `/` — home comercial y entidad principal de ARVI.
+- `/chatbot-whatsapp-ia` — automatización conversacional y agentes IA para WhatsApp.
+- `/agentes-ia` — agentes de inteligencia artificial para procesos empresariales.
+- `/automatizacion-procesos` — automatización e integración de procesos.
+- `/agente` — landing comercial existente de ARVI Agente IA.
+- `/diagnostico` — herramienta de diagnóstico.
+- `/links` — hub del ecosistema ARVI, preservado para bio y accesos rápidos.
 
-Para ocultar temporalmente un enlace agrega:
+## SEO
 
-```js
-active: false
-```
-
-Para cambiar la campaña destacada modifica `featured`. El enlace de la biografía de Instagram permanece igual.
-
-## Registro de clics
-
-`/api/click` registra eventos no identificables en los logs de Vercel con el nombre `ARVI_HUB_CLICK`.
-
-No guarda nombres, correos, teléfonos, direcciones IP ni contenido de conversaciones. Es instrumentación básica; no reemplaza una plataforma analítica con historial y panel de reportes.
+- `robots.txt` expone el sitemap.
+- `sitemap.xml` lista las rutas indexables iniciales.
+- La home incluye datos estructurados `Organization`, `WebSite` y `Service`.
+- Las páginas de servicio tienen canonical, metadatos específicos y schema de servicio.
+- La página de WhatsApp incluye además preguntas frecuentes visibles y `FAQPage` estructurado.
 
 ## Dominios previstos
 
-- `arvi.rohigroup.co` — hub principal.
-- `agente.arvi.rohigroup.co` — Arvi Agente IA.
+- `arvi.rohigroup.co` — sitio principal.
+- `agente.arvi.rohigroup.co` — ARVI Agente IA.
+- `diagnostico.arvi.rohigroup.co` — diagnóstico.
 
 ## Despliegue
 
-El proyecto no necesita npm ni proceso de compilación. Vercel sirve los archivos estáticos y publica la función ubicada en `api/click.js`.
+El proyecto no necesita npm ni compilación. Vercel sirve HTML/CSS/JS estático y la función `api/click.js` para instrumentación básica de clics del hub.
+
+## Próximas capas de posicionamiento
+
+1. Verticales: belleza, hotelería, consultorios y PYMES.
+2. Casos de uso y casos reales publicables.
+3. Centro de recursos y contenido editorial.
+4. Calculadora de retorno de automatización.
+5. Search Console, medición de consultas y mejoras por datos reales.
