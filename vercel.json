@@ -62,6 +62,18 @@
       "destination": "/automatizacion-procesos.html"
     },
     {
+      "source": "/sectores/belleza",
+      "destination": "/sectores-belleza.html"
+    },
+    {
+      "source": "/sectores/hoteles",
+      "destination": "/sectores-hoteles.html"
+    },
+    {
+      "source": "/recursos/chatbot-vs-agente-ia",
+      "destination": "/recurso-chatbot-vs-agente-ia.html"
+    },
+    {
       "source": "/agente",
       "destination": "/agente.html"
     },
