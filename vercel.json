@@ -50,12 +50,28 @@
       "destination": "/agente.html"
     },
     {
+      "source": "/chatbot-whatsapp-ia",
+      "destination": "/chatbot-whatsapp-ia.html"
+    },
+    {
+      "source": "/agentes-ia",
+      "destination": "/agentes-ia.html"
+    },
+    {
+      "source": "/automatizacion-procesos",
+      "destination": "/automatizacion-procesos.html"
+    },
+    {
       "source": "/agente",
       "destination": "/agente.html"
     },
     {
       "source": "/diagnostico",
       "destination": "/diagnostico.html"
+    },
+    {
+      "source": "/links",
+      "destination": "/links.html"
     },
     {
       "source": "/",
