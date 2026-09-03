@@ -3,26 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F8FAFC" />
   <title>Precios de automatización con IA y WhatsApp en Colombia | ARVI</title>
   <meta name="description" content="Conoce cómo cotiza ARVI proyectos de automatización con IA y WhatsApp en Colombia: implementación inicial, integraciones, operación y mejora continua. Implementaciones desde $890.000 COP." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="https://arvi.rohigroup.co/precios" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/site.css" />
+  <style>
+    .pricing-page .hero-grid {
+      min-height: 620px;
+      padding: 58px 0 74px;
+      gap: clamp(44px, 6vw, 82px);
+      align-items: center;
+    }
+    .pricing-page .hero h1 {
+      max-width: 690px;
+      font-size: clamp(43px, 5.1vw, 66px);
+      line-height: 1.04;
+      letter-spacing: -.028em;
+    }
+    .pricing-page .hero h1 span { color: var(--arvi-green); }
+    .pricing-page .hero-lead { max-width: 680px; }
+
+    .pricing-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+    .pricing-card h2 {
+      margin: 8px 0 14px;
+      color: var(--arvi-green);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: clamp(30px, 3.3vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+    }
+    .pricing-card > p:not(.eyebrow) {
+      margin: 0 0 22px;
+      color: var(--tech-500);
+      line-height: 1.65;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 13px;
+      align-items: start;
+      margin-top: 11px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--premium-white);
+    }
+    .process-step > span {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--arvi-blue);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .process-step strong {
+      display: block;
+      color: var(--tech-900);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .process-step small {
+      display: block;
+      margin-top: 4px;
+      color: var(--tech-500);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .pricing-page .section-heading h2,
+    .pricing-page .cta-box h2 { letter-spacing: -.02em; }
+
+    @media (max-width: 980px) {
+      .pricing-page .hero-grid { min-height: auto; padding: 52px 0 66px; }
+      .pricing-card { max-width: 680px; }
+    }
+    @media (max-width: 640px) {
+      .pricing-page .hero h1 { font-size: 42px; letter-spacing: -.018em; }
+      .pricing-card { padding: 22px; border-radius: 22px; }
+    }
+  </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Implementación de automatización con IA y WhatsApp","provider":{"@type":"Organization","name":"ARVI","url":"https://arvi.rohigroup.co/"},"areaServed":"Colombia","offers":{"@type":"Offer","priceCurrency":"COP","price":"890000","description":"Valor inicial de referencia para implementaciones de alcance esencial. El precio final depende de proceso, integraciones, volumen y soporte."}}</script>
 </head>
-<body>
-<header class="topbar"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark">A</span><span>ARVI</span></a><nav class="nav-links"><a href="/chatbot-whatsapp-ia">WhatsApp + IA</a><a href="/automatizacion-procesos">Procesos</a><a href="/calculadora-roi">Calculadora ROI</a><a href="/recursos">Recursos</a></nav><a class="button button-small button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20para%20mi%20negocio.">Cotizar</a></div></header>
+<body class="pricing-page">
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/chatbot-whatsapp-ia">WhatsApp + IA</a>
+      <a href="/automatizacion-procesos">Procesos</a>
+      <a href="/calculadora-roi">Calculadora ROI</a>
+      <a href="/recursos">Recursos</a>
+    </nav>
+    <a class="button button-small button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20para%20mi%20negocio.">Cotizar</a>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">Precios ARVI · Colombia</p><h1>Pagas por resolver un proceso. No por coleccionar <span>herramientas.</span></h1><p class="hero-lead">El costo depende de cuántas decisiones debe tomar el flujo, qué sistemas necesita consultar, cuántas integraciones requiere y qué nivel de acompañamiento operativo necesita. Publicamos un punto de partida para que puedas saber si estamos en tu rango antes de hablar.</p><div class="hero-actions"><a class="button button-primary" href="/diagnostico">Diagnosticar mi caso</a><a class="button button-secondary" href="/calculadora-roi">Calcular oportunidad</a></div></div><div class="conversation-card"><p class="eyebrow dark">Punto de entrada</p><h2 style="font-family:Poppins,sans-serif;font-size:38px;margin:8px 0;color:#22c55e">Desde $890.000 COP</h2><p style="color:#627486;line-height:1.65">Implementación inicial de alcance esencial. El valor mensual y cualquier módulo adicional dependen del volumen de conversaciones, integraciones, soporte y operación requeridos.</p><div class="process-step"><span>1</span><div><strong>Diagnóstico</strong><small>Definimos qué proceso sí vale la pena automatizar.</small></div></div><div class="process-step"><span>2</span><div><strong>Alcance</strong><small>Separamos flujo base, integraciones y excepciones.</small></div></div><div class="process-step"><span>3</span><div><strong>Cotización</strong><small>Recibes implementación, operación y adicionales por separado.</small></div></div></div></div></section>
-<section class="section light"><div class="container"><div class="section-heading"><p class="eyebrow dark">Tres niveles de alcance</p><h2>No todas las automatizaciones cuestan lo mismo porque no todas hacen lo mismo.</h2><p class="section-intro">Estos niveles sirven para ubicar el proyecto. El alcance final se define después de entender el proceso real.</p></div><div class="cards three"><article class="card"><span class="card-number">01</span><h3>ARVI Esencial</h3><p><strong>Desde $890.000 COP de implementación.</strong><br><br>Un flujo principal de atención o captación, base de conocimiento delimitada, reglas claras, salida a humano y acompañamiento de puesta en marcha.</p></article><article class="card"><span class="card-number">02</span><h3>ARVI Operativo</h3><p>Para procesos con estados, agenda, seguimiento, CRM, formularios u otras integraciones. Se cotiza según número de flujos, fuentes de datos, excepciones y volumen.</p></article><article class="card"><span class="card-number">03</span><h3>ARVI Multi-proceso</h3><p>Para empresas que necesitan automatizar varias áreas, múltiples agentes o procesos coordinados. Incluye levantamiento más profundo, pruebas, observabilidad y evolución por fases.</p></article></div></div></section>
-<section class="section soft-section"><div class="container"><div class="section-heading split"><div><p class="eyebrow dark">Qué mueve el precio</p><h2>La complejidad está en el proceso, no en cuántos mensajes escribe el bot.</h2></div><p>Dos empresas pueden recibir el mismo número de chats y requerir arquitecturas completamente distintas. Estas son las variables que más cambian el alcance.</p></div><div class="cards three"><article class="card"><h3>Integraciones</h3><p>Calendario, CRM, base de datos, formularios, APIs, sistemas internos o herramientas de terceros.</p></article><article class="card"><h3>Decisiones y excepciones</h3><p>Cuántos estados tiene el flujo, qué reglas debe respetar y qué ocurre cuando el caso se sale del camino esperado.</p></article><article class="card"><h3>Volumen y operación</h3><p>Cantidad de conversaciones, consumo de modelos, monitoreo, soporte, ajustes y nivel de acompañamiento requerido.</p></article></div></div></section>
-<section class="section dark-section"><div class="container"><div class="section-heading split inverted"><div><p class="eyebrow">Cómo lo separamos</p><h2>Implementación, operación y evolución deben verse por separado.</h2></div><p>Así puedes entender qué pagas por construir, qué corresponde al funcionamiento mensual y qué es una ampliación futura del alcance.</p></div><div class="flow"><div class="flow-item"><strong>Implementación</strong><span>Diseño + configuración + integraciones + pruebas</span></div><div class="flow-arrow">+</div><div class="flow-item"><strong>Operación mensual</strong><span>Infraestructura + consumo + soporte según plan</span></div><div class="flow-arrow">+</div><div class="flow-item"><strong>Módulos</strong><span>Nuevos procesos e integraciones</span></div><div class="flow-arrow">→</div><div class="flow-item"><strong>ROI</strong><span>Tiempo, conversiones, errores y seguimiento</span></div></div></div></section>
-<section class="section light"><div class="container"><div class="section-heading"><p class="eyebrow dark">Antes de comprar</p><h2>Primero verifica si la automatización tiene sentido económico.</h2></div><div class="cards three"><a class="card service-card" href="/calculadora-roi"><span>🧮</span><h3>Calcula horas recuperables</h3><p>Estima cuánto tiempo consume hoy el proceso y cuánto representa en costo operativo.</p><b>Abrir calculadora →</b></a><a class="card service-card" href="/diagnostico"><span>🔎</span><h3>Haz el diagnóstico</h3><p>Identifica si el cuello de botella está realmente en atención, seguimiento, agenda o administración.</p><b>Empezar diagnóstico →</b></a><a class="card service-card" href="/casos/agenda-belleza-whatsapp"><span>📚</span><h3>Mira un caso real</h3><p>Cómo diseñamos una agenda por WhatsApp sin dejar que la IA invente disponibilidad.</p><b>Leer caso →</b></a></div></div></section>
-<section class="cta-section"><div class="container cta-box"><p class="eyebrow">Cotización con alcance</p><h2>Cuéntanos el proceso y te decimos qué construiríamos primero.</h2><p>Sin obligación de automatizar todo. La propuesta debe separar qué es crítico ahora, qué puede esperar y qué no tiene sentido automatizar.</p><div class="hero-actions centered"><a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20una%20automatizaci%C3%B3n%20con%20ARVI.">Solicitar cotización</a><a class="button button-secondary" href="/diagnostico">Hacer diagnóstico</a></div></div></section>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow dark">Precios ARVI · Colombia</p>
+        <h1>Pagas por resolver un proceso. No por coleccionar <span>herramientas.</span></h1>
+        <p class="hero-lead">El costo depende de cuántas decisiones debe tomar el flujo, qué sistemas necesita consultar, cuántas integraciones requiere y qué nivel de acompañamiento operativo necesita. Publicamos un punto de partida para que puedas saber si estamos en tu rango antes de hablar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/diagnostico">Diagnosticar mi caso</a>
+          <a class="button button-secondary" href="/calculadora-roi">Calcular oportunidad</a>
+        </div>
+      </div>
+
+      <aside class="pricing-card" aria-label="Punto de entrada de ARVI">
+        <p class="eyebrow dark">Punto de entrada</p>
+        <h2>Desde $890.000 COP</h2>
+        <p>Implementación inicial de alcance esencial. El valor mensual y cualquier módulo adicional dependen del volumen de conversaciones, integraciones, soporte y operación requeridos.</p>
+        <div class="process-step"><span>01</span><div><strong>Diagnóstico</strong><small>Definimos qué proceso sí vale la pena automatizar.</small></div></div>
+        <div class="process-step"><span>02</span><div><strong>Alcance</strong><small>Separamos flujo base, integraciones y excepciones.</small></div></div>
+        <div class="process-step"><span>03</span><div><strong>Cotización</strong><small>Recibes implementación, operación y adicionales por separado.</small></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark">Tres niveles de alcance</p>
+        <h2>No todas las automatizaciones cuestan lo mismo porque no todas hacen lo mismo.</h2>
+        <p class="section-intro">Estos niveles sirven para ubicar el proyecto. El alcance final se define después de entender el proceso real.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><span class="card-number">01</span><h3>ARVI Esencial</h3><p><strong>Desde $890.000 COP de implementación.</strong><br><br>Un flujo principal de atención o captación, base de conocimiento delimitada, reglas claras, salida a humano y acompañamiento de puesta en marcha.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>ARVI Operativo</h3><p>Para procesos con estados, agenda, seguimiento, CRM, formularios u otras integraciones. Se cotiza según número de flujos, fuentes de datos, excepciones y volumen.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>ARVI Multi-proceso</h3><p>Para empresas que necesitan automatizar varias áreas, múltiples agentes o procesos coordinados. Incluye levantamiento más profundo, pruebas, observabilidad y evolución por fases.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading split">
+        <div><p class="eyebrow dark">Qué mueve el precio</p><h2>La complejidad está en el proceso, no en cuántos mensajes escribe el bot.</h2></div>
+        <p>Dos empresas pueden recibir el mismo número de chats y requerir arquitecturas completamente distintas. Estas son las variables que más cambian el alcance.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><span class="service-kicker">INTEGRACIONES</span><h3>Herramientas conectadas</h3><p>Calendario, CRM, base de datos, formularios, APIs, sistemas internos o herramientas de terceros.</p></article>
+        <article class="card"><span class="service-kicker">REGLAS</span><h3>Decisiones y excepciones</h3><p>Cuántos estados tiene el flujo, qué reglas debe respetar y qué ocurre cuando el caso se sale del camino esperado.</p></article>
+        <article class="card"><span class="service-kicker">OPERACIÓN</span><h3>Volumen y soporte</h3><p>Cantidad de conversaciones, consumo de modelos, monitoreo, soporte, ajustes y nivel de acompañamiento requerido.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section">
+    <div class="container">
+      <div class="section-heading split inverted">
+        <div><p class="eyebrow">Cómo lo separamos</p><h2>Implementación, operación y evolución deben verse por separado.</h2></div>
+        <p>Así puedes entender qué pagas por construir, qué corresponde al funcionamiento mensual y qué es una ampliación futura del alcance.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-item"><strong>Implementación</strong><span>Diseño + configuración + integraciones + pruebas</span></div><div class="flow-arrow">+</div>
+        <div class="flow-item"><strong>Operación mensual</strong><span>Infraestructura + consumo + soporte según plan</span></div><div class="flow-arrow">+</div>
+        <div class="flow-item"><strong>Módulos</strong><span>Nuevos procesos e integraciones</span></div><div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>ROI</strong><span>Tiempo, conversiones, errores y seguimiento</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow dark">Antes de comprar</p><h2>Primero verifica si la automatización tiene sentido económico.</h2></div>
+      <div class="cards three">
+        <a class="card service-card" href="/calculadora-roi"><span class="service-kicker">ROI</span><h3>Calcula horas recuperables</h3><p>Estima cuánto tiempo consume hoy el proceso y cuánto representa en costo operativo.</p><b>Abrir calculadora →</b></a>
+        <a class="card service-card" href="/diagnostico"><span class="service-kicker">DIAGNÓSTICO</span><h3>Encuentra el cuello de botella</h3><p>Identifica si el problema está realmente en atención, seguimiento, agenda o administración.</p><b>Empezar diagnóstico →</b></a>
+        <a class="card service-card" href="/casos/agenda-belleza-whatsapp"><span class="service-kicker">CASO REAL</span><h3>Mira cómo lo resolvemos</h3><p>Cómo diseñamos una agenda por WhatsApp sin dejar que la IA invente disponibilidad.</p><b>Leer caso →</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-box">
+      <p class="eyebrow">Cotización con alcance</p>
+      <h2>Cuéntanos el proceso y te decimos qué construiríamos primero.</h2>
+      <p>Sin obligación de automatizar todo. La propuesta debe separar qué es crítico ahora, qué puede esperar y qué no tiene sentido automatizar.</p>
+      <div class="hero-actions centered">
+        <a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20una%20automatizaci%C3%B3n%20con%20ARVI.">Solicitar cotización</a>
+        <a class="button button-secondary" href="/diagnostico">Hacer diagnóstico</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-mark">A</span><span>ARVI</span></a><p>Automatización con IA aplicada a procesos reales.</p></div><div><strong>Soluciones</strong><a href="/chatbot-whatsapp-ia">WhatsApp + IA</a><a href="/automatizacion-procesos">Procesos</a></div><div><strong>Decide</strong><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div><div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><span>Colombia</span></div></div></footer>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales.</p></div>
+    <div><strong>Soluciones</strong><a href="/chatbot-whatsapp-ia">WhatsApp + IA</a><a href="/automatizacion-procesos">Procesos</a></div>
+    <div><strong>Decide</strong><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div>
+    <div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><span>Colombia</span></div>
+  </div>
+</footer>
 </body>
 </html>
