@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F8FAFC" />
   <title>ARVI | Automatización con IA y WhatsApp para empresas en Colombia</title>
-  <meta name="description" content="ARVI implementa agentes de inteligencia artificial y automatización para negocios que atienden, venden y agendan por WhatsApp en Colombia. Responde, agenda, hace seguimiento y escala a tu equipo cuando hace falta criterio humano." />
+  <meta name="description" content="ARVI implementa automatización con inteligencia artificial para negocios en Colombia. ARVI Agenda organiza citas por WhatsApp, ARVI Recepción atiende hoteles y ARVI conecta procesos empresariales con herramientas reales." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="https://arvi.rohigroup.co/" />
   <meta property="og:locale" content="es_CO" />
@@ -21,9 +21,59 @@
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":"Organization","@id":"https://arvi.rohigroup.co/#organization","name":"ARVI","url":"https://arvi.rohigroup.co/","description":"Solución colombiana de automatización con inteligencia artificial para negocios que atienden, venden y gestionan procesos por WhatsApp.","parentOrganization":{"@type":"Organization","name":"Rohi Group SAS","url":"https://rohigroup.co/"},"areaServed":{"@type":"Country","name":"Colombia"},"address":{"@type":"PostalAddress","addressLocality":"Valledupar","addressRegion":"Cesar","addressCountry":"CO"},"email":"rohigroupsas@gmail.com"},
-      {"@type":"WebSite","@id":"https://arvi.rohigroup.co/#website","url":"https://arvi.rohigroup.co/","name":"ARVI","inLanguage":"es-CO","publisher":{"@id":"https://arvi.rohigroup.co/#organization"}},
-      {"@type":"Service","@id":"https://arvi.rohigroup.co/#service","name":"Automatización con IA para WhatsApp","provider":{"@id":"https://arvi.rohigroup.co/#organization"},"areaServed":"Colombia","serviceType":["Agentes de inteligencia artificial","Automatización de WhatsApp","Atención al cliente automatizada","Agendamiento y seguimiento automatizado","Automatización de procesos"]}
+      {
+        "@type":"Organization",
+        "@id":"https://rohigroup.co/#organization",
+        "name":"Rohi Group S.A.S.",
+        "url":"https://rohigroup.co/",
+        "address":{"@type":"PostalAddress","addressLocality":"Valledupar","addressRegion":"Cesar","addressCountry":"CO"},
+        "email":"rohigroupsas@gmail.com"
+      },
+      {
+        "@type":"Brand",
+        "@id":"https://arvi.rohigroup.co/#brand",
+        "name":"ARVI",
+        "url":"https://arvi.rohigroup.co/",
+        "slogan":"Automatiza y vive.",
+        "description":"Marca de Rohi Group S.A.S. para soluciones de automatización con inteligencia artificial conectadas a procesos reales de negocio."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://arvi.rohigroup.co/#website",
+        "url":"https://arvi.rohigroup.co/",
+        "name":"ARVI",
+        "inLanguage":"es-CO",
+        "publisher":{"@id":"https://rohigroup.co/#organization"},
+        "about":{"@id":"https://arvi.rohigroup.co/#brand"}
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/#service",
+        "name":"ARVI — Automatización con IA para empresas",
+        "url":"https://arvi.rohigroup.co/",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "areaServed":{"@type":"Country","name":"Colombia"},
+        "serviceType":["Agentes de inteligencia artificial","Automatización de WhatsApp","Atención al cliente automatizada","Agendamiento y seguimiento automatizado","Automatización de procesos"]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/sectores/belleza#service",
+        "name":"ARVI Agenda",
+        "url":"https://arvi.rohigroup.co/sectores/belleza",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "serviceType":"Agenda inteligente por WhatsApp para negocios de belleza y bienestar"
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/sectores/hoteles#service",
+        "name":"ARVI Recepción",
+        "url":"https://arvi.rohigroup.co/sectores/hoteles",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "serviceType":"Recepción digital por WhatsApp para hoteles y alojamientos"
+      }
     ]
   }
   </script>
@@ -128,7 +178,7 @@
         <a class="card service-card accent-cyan" href="/chatbot-whatsapp-ia"><span class="service-kicker">WHATSAPP</span><h3>Atención con IA</h3><p>Responde consultas, recoge información y mantiene el contexto sin convertir cada chat en una tarea manual.</p><b>Conocer solución →</b></a>
         <a class="card service-card accent-violet" href="/agentes-ia"><span class="service-kicker">AGENTES IA</span><h3>Agentes que trabajan con herramientas</h3><p>Consultan información, siguen reglas y preparan acciones dentro del flujo real de la empresa.</p><b>Conocer solución →</b></a>
         <a class="card service-card accent-green" href="/automatizacion-procesos"><span class="service-kicker">AUTOMATIZACIÓN</span><h3>Procesos conectados</h3><p>Une conversaciones, calendarios, formularios, CRM y seguimiento para que el trabajo no quede partido.</p><b>Conocer solución →</b></a>
-        <a class="card service-card" href="/recursos/automatizar-citas-whatsapp"><span class="service-kicker">AGENDA</span><h3>Citas y recordatorios</h3><p>Disponibilidad calculada con reglas reales, confirmaciones, recordatorios y reprogramaciones.</p><b>Ver cómo funciona →</b></a>
+        <a class="card service-card" href="/sectores/belleza"><span class="service-kicker">ARVI AGENDA</span><h3>Citas y recordatorios</h3><p>Disponibilidad calculada con reglas reales, confirmaciones, recordatorios y reprogramaciones.</p><b>Conocer ARVI Agenda →</b></a>
         <a class="card service-card" href="/calculadora-roi"><span class="service-kicker">MÉTRICAS</span><h3>ROI y oportunidad</h3><p>Estima horas, costo operativo y oportunidad antes de decidir qué conviene automatizar.</p><b>Calcular →</b></a>
         <a class="card service-card" href="/recursos/chatbot-vs-agente-ia"><span class="service-kicker">HÍBRIDO</span><h3>IA + personas</h3><p>ARVI resuelve lo repetitivo y tu equipo entra cuando el caso necesita criterio, negociación o excepción.</p><b>Entender la diferencia →</b></a>
       </div>
@@ -138,13 +188,13 @@
   <section class="section soft-section" id="sectores">
     <div class="container">
       <div class="section-heading split">
-        <div><p class="eyebrow dark">Verticales</p><h2>No le ponemos el mismo bot a todos los negocios.</h2></div>
-        <p>Cada sector tiene lenguaje, reglas y decisiones distintas. ARVI se diseña alrededor de la operación real, no de una plantilla que cambia de nombre.</p>
+        <div><p class="eyebrow dark">Soluciones por operación</p><h2>Cuando conocemos el proceso, podemos empaquetarlo mejor.</h2></div>
+        <p>ARVI Agenda y ARVI Recepción nacen de operaciones concretas. Para otros sectores diseñamos el flujo alrededor de sus reglas, datos y decisiones reales.</p>
       </div>
       <div class="sector-grid">
-        <a href="/sectores/belleza"><span>CITAS</span><h3>Belleza y bienestar</h3><p>Servicios, profesionales, disponibilidad, abonos, recordatorios y reprogramaciones.</p></a>
-        <a href="/sectores/hoteles"><span>HOSPITALIDAD</span><h3>Hoteles y turismo</h3><p>Consultas, reservas, pre-llegada, solicitudes del huésped y seguimiento.</p></a>
-        <a href="/sectores/consultorios"><span>RECEPCIÓN</span><h3>Consultorios y servicios</h3><p>Agenda y gestión administrativa con límites claros para información sensible.</p></a>
+        <a href="/sectores/belleza"><span>AGENDA</span><h3>ARVI Agenda</h3><p>Para salones y bienestar: servicios, profesionales, disponibilidad real, abonos, recordatorios y reprogramaciones.</p></a>
+        <a href="/sectores/hoteles"><span>RECEPCIÓN</span><h3>ARVI Recepción</h3><p>Para hoteles y alojamientos: consultas, reservas, pre-llegada, solicitudes del huésped y seguimiento.</p></a>
+        <a href="/sectores/consultorios"><span>SERVICIOS</span><h3>Consultorios y servicios</h3><p>Agenda y gestión administrativa con límites claros para información sensible.</p></a>
         <a href="/sectores/pymes"><span>PROCESOS</span><h3>PYMES y equipos</h3><p>Atención, ventas y procesos administrativos conectados con herramientas reales.</p></a>
       </div>
     </div>
@@ -154,7 +204,7 @@
     <div class="container">
       <div class="case-band">
         <div class="case-visual">
-          <p class="eyebrow">Caso real · Agenda</p>
+          <p class="eyebrow">Caso real · ARVI Agenda</p>
           <strong>Conversar no es lo mismo que operar.</strong>
         </div>
         <div class="case-copy">
@@ -205,8 +255,8 @@
 
 <footer class="footer">
   <div class="container footer-grid">
-    <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales. Una solución de Rohi Group S.A.S.</p></div>
-    <div><strong>Soluciones</strong><a href="/chatbot-whatsapp-ia">WhatsApp + IA</a><a href="/agentes-ia">Agentes IA</a><a href="/automatizacion-procesos">Automatización</a><a href="/precios">Precios</a></div>
+    <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales. Una marca de Rohi Group S.A.S.</p></div>
+    <div><strong>Soluciones</strong><a href="/sectores/belleza">ARVI Agenda</a><a href="/sectores/hoteles">ARVI Recepción</a><a href="/automatizacion-procesos">Automatización</a><a href="/precios">Precios</a></div>
     <div><strong>Aprende</strong><a href="/recursos">Recursos</a><a href="/casos/agenda-belleza-whatsapp">Casos</a><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div>
     <div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><a href="mailto:rohigroupsas@gmail.com">rohigroupsas@gmail.com</a><span>Valledupar, Colombia</span></div>
   </div>
