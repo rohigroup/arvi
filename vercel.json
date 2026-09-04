@@ -1,91 +1,49 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/click.js": {
-      "maxDuration": 5
-    }
+    "api/click.js": { "maxDuration": 5 },
+    "api/diagnostico.js": { "maxDuration": 5, "includeFiles": "diagnostico.html" }
   },
   "redirects": [
     {
       "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "diagnostico.arvi.rohigroup.co"
-        }
-      ],
+      "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }],
       "destination": "/diagnostico",
       "permanent": false
     }
   ],
   "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "diagnostico.arvi.rohigroup.co"
-        }
-      ],
-      "destination": "/diagnostico.html"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "diagnostico.arvi.rohigroup.co"
-        }
-      ],
-      "destination": "/diagnostico.html"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "agente.arvi.rohigroup.co"
-        }
-      ],
-      "destination": "/agente.html"
-    },
-    {
-      "source": "/agente",
-      "destination": "/agente.html"
-    },
-    {
-      "source": "/diagnostico",
-      "destination": "/diagnostico.html"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
-    }
+    { "source": "/", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "agente.arvi.rohigroup.co" }], "destination": "/agente-v2.html" },
+    { "source": "/chatbot-whatsapp-ia", "destination": "/chatbot-whatsapp-ia.html" },
+    { "source": "/agentes-ia", "destination": "/agentes-ia.html" },
+    { "source": "/automatizacion-procesos", "destination": "/automatizacion-procesos.html" },
+    { "source": "/sectores/belleza", "destination": "/sectores-belleza.html" },
+    { "source": "/sectores/hoteles", "destination": "/sectores-hoteles.html" },
+    { "source": "/sectores/consultorios", "destination": "/sectores/consultorios.html" },
+    { "source": "/sectores/pymes", "destination": "/sectores/pymes.html" },
+    { "source": "/casos/agenda-belleza-whatsapp", "destination": "/casos/agenda-belleza-whatsapp.html" },
+    { "source": "/recursos", "destination": "/recursos.html" },
+    { "source": "/recursos/chatbot-vs-agente-ia", "destination": "/recurso-chatbot-vs-agente-ia.html" },
+    { "source": "/recursos/cuanto-cuesta-chatbot-whatsapp-colombia", "destination": "/recursos/cuanto-cuesta-chatbot-whatsapp-colombia.html" },
+    { "source": "/recursos/automatizar-citas-whatsapp", "destination": "/recursos/automatizar-citas-whatsapp.html" },
+    { "source": "/precios", "destination": "/precios.html" },
+    { "source": "/calculadora-roi", "destination": "/calculadora-roi.html" },
+    { "source": "/agente", "destination": "/agente-v2.html" },
+    { "source": "/diagnostico", "destination": "/api/diagnostico" },
+    { "source": "/links", "destination": "/links.html" },
+    { "source": "/", "destination": "/index.html" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=()"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://app.rohigroup.co; connect-src 'self' https://app.rohigroup.co; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://app.rohigroup.co https://res.cloudinary.com; connect-src 'self' https://app.rohigroup.co; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" }
       ]
     }
   ]

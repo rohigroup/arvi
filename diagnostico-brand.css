@@ -1,0 +1,15 @@
+:root{--bg:#0B1424!important;--panel:#101D32!important;--panel2:#0C1728!important;--text:#F8FAFC!important;--muted:#9FB0C3!important;--line:#263B53!important;--blue:#003A70!important;--cyan:#06B6D4!important;--green:#22C55E!important;--green2:#16A34A!important}
+body{background:radial-gradient(circle at 10% 0,rgba(6,182,212,.12),transparent 28%),radial-gradient(circle at 95% 0,rgba(124,58,237,.12),transparent 28%),linear-gradient(#101D32,#0B1424)!important}
+h1,h2,h3{font-family:"Plus Jakarta Sans",Inter,sans-serif!important;letter-spacing:-.02em!important}
+.top{background:rgba(11,20,36,.9)!important}
+.brand{width:118px;height:42px;overflow:hidden;color:transparent!important;font-size:0!important;letter-spacing:0!important;background:url('https://res.cloudinary.com/dmh6nxvur/image/upload/c_crop,x_270,y_315,w_970,h_350/v1788451856/arvi/brand/logo-arvi.png') center/contain no-repeat}
+.tag{color:#A9BED0!important}
+.hero h1{line-height:1.06!important;letter-spacing:-.022em!important}.grad{background:linear-gradient(120deg,#D8E9F5,#06B6D4,#22C55E)!important;-webkit-background-clip:text!important;color:transparent!important}
+.note{border-color:rgba(6,182,212,.18)!important;background:rgba(16,29,50,.82)!important}
+.card{background:linear-gradient(180deg,rgba(16,29,50,.98),rgba(11,20,36,.98))!important;border-color:rgba(6,182,212,.14)!important;box-shadow:0 30px 80px -45px rgba(0,58,112,.68)!important}
+.fill{background:linear-gradient(90deg,#003A70,#06B6D4)!important}.stepmeta span{color:#75CFE1!important}
+input:focus,select:focus,textarea:focus{border-color:#06B6D4!important;box-shadow:0 0 0 4px rgba(6,182,212,.12)!important}.choice input{accent-color:#22C55E!important}
+.next,.send{background:#22C55E!important;color:#07160C!important}.next:hover,.send:hover{background:#1FB257!important}.prev,.add-participant,.participant-remove{background:#1C2D45!important}
+.money-note{border-color:rgba(6,182,212,.2)!important;background:rgba(6,182,212,.06)!important}.ok{background:rgba(34,197,94,.14)!important;border-color:rgba(34,197,94,.3)!important}
+button{font-family:"Plus Jakarta Sans",Inter,sans-serif!important}
+@media(max-width:780px){.brand{width:104px;height:38px}.hero h1{letter-spacing:-.016em!important}}

@@ -1,107 +1,266 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#071526" />
-    <meta
-      name="description"
-      content="Arvi reúne automatización, agente IA, formación práctica y soluciones para negocios y equipos en un solo lugar."
-    />
-    <meta property="og:title" content="Arvi | Automatiza y vive" />
-    <meta
-      property="og:description"
-      content="Conoce Arvi Agente IA, Arvi Academy y las rutas activas del ecosistema Arvi."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://arvi.rohigroup.co/" />
-    <title>Arvi | Automatiza y vive</title>
-    <link rel="canonical" href="https://arvi.rohigroup.co/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/hub.css" />
-    <script src="/router.js"></script>
-    <script src="/links.js" defer></script>
-    <script src="/hub.js" defer></script>
-  </head>
-  <body>
-    <main class="arvi-shell">
-      <section class="hero-block">
-        <div class="topline">
-          <a class="brand-lockup" href="/" aria-label="Arvi">
-            <span class="brand-name">Arvi</span>
-            <span class="brand-pill">IA · Automatización · Formación</span>
-          </a>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F8FAFC" />
+  <title>ARVI | Automatización con IA y WhatsApp para empresas en Colombia</title>
+  <meta name="description" content="ARVI implementa automatización con inteligencia artificial para negocios en Colombia. ARVI Agenda organiza citas por WhatsApp, ARVI Recepción atiende hoteles y ARVI conecta procesos empresariales con herramientas reales." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://arvi.rohigroup.co/" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ARVI" />
+  <meta property="og:title" content="ARVI | No es un bot. Es tu equipo." />
+  <meta property="og:description" content="Automatización con IA para WhatsApp conectada a los procesos reales de tu negocio." />
+  <meta property="og:url" content="https://arvi.rohigroup.co/" />
+  <meta property="og:image" content="https://res.cloudinary.com/dmh6nxvur/image/upload/v1788451872/arvi/brand/arvi-mascota.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/site.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://rohigroup.co/#organization",
+        "name":"Rohi Group S.A.S.",
+        "url":"https://rohigroup.co/",
+        "address":{"@type":"PostalAddress","addressLocality":"Valledupar","addressRegion":"Cesar","addressCountry":"CO"},
+        "email":"rohigroupsas@gmail.com"
+      },
+      {
+        "@type":"Brand",
+        "@id":"https://arvi.rohigroup.co/#brand",
+        "name":"ARVI",
+        "url":"https://arvi.rohigroup.co/",
+        "slogan":"Automatiza y vive.",
+        "description":"Marca de Rohi Group S.A.S. para soluciones de automatización con inteligencia artificial conectadas a procesos reales de negocio."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://arvi.rohigroup.co/#website",
+        "url":"https://arvi.rohigroup.co/",
+        "name":"ARVI",
+        "inLanguage":"es-CO",
+        "publisher":{"@id":"https://rohigroup.co/#organization"},
+        "about":{"@id":"https://arvi.rohigroup.co/#brand"}
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/#service",
+        "name":"ARVI — Automatización con IA para empresas",
+        "url":"https://arvi.rohigroup.co/",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "areaServed":{"@type":"Country","name":"Colombia"},
+        "serviceType":["Agentes de inteligencia artificial","Automatización de WhatsApp","Atención al cliente automatizada","Agendamiento y seguimiento automatizado","Automatización de procesos"]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/sectores/belleza#service",
+        "name":"ARVI Agenda",
+        "url":"https://arvi.rohigroup.co/sectores/belleza",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "serviceType":"Agenda inteligente por WhatsApp para negocios de belleza y bienestar"
+      },
+      {
+        "@type":"Service",
+        "@id":"https://arvi.rohigroup.co/sectores/hoteles#service",
+        "name":"ARVI Recepción",
+        "url":"https://arvi.rohigroup.co/sectores/hoteles",
+        "provider":{"@id":"https://rohigroup.co/#organization"},
+        "brand":{"@id":"https://arvi.rohigroup.co/#brand"},
+        "serviceType":"Recepción digital por WhatsApp para hoteles y alojamientos"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="ARVI inicio"><span class="brand-mark">A</span><span>ARVI</span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#sectores">Sectores</a>
+      <a href="/casos/agenda-belleza-whatsapp">Casos</a>
+      <a href="/recursos">Recursos</a>
+    </nav>
+    <a class="button button-small button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20saber%20c%C3%B3mo%20ARVI%20puede%20automatizar%20mi%20negocio." rel="noopener">Hablar con ARVI</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow dark">Automatización con IA para WhatsApp · Colombia</p>
+        <h1><span class="brand-emphasis">No es un bot.</span><br>Es tu <span class="action-emphasis">equipo.</span></h1>
+        <p class="hero-lead">ARVI responde, agenda y hace seguimiento mientras tú trabajas. Conecta las conversaciones de WhatsApp con los procesos reales de tu negocio y te entrega lo que sí necesita criterio humano.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/diagnostico">Ver qué puedo automatizar</a>
+          <a class="button button-secondary" href="#como-funciona">Entender cómo funciona</a>
         </div>
-
-        <div class="hero-copy">
-          <p class="eyebrow" id="heroEyebrow">Automatiza y vive</p>
-          <h1 id="heroTitle">La tecnología sirve cuando se convierte en una parte útil de tu negocio.</h1>
-          <p class="hero-description" id="heroDescription">
-            En Arvi reunimos atención con IA, formación práctica y soluciones pensadas para ayudarte a trabajar mejor, responder más rápido y recuperar tiempo.
-          </p>
+        <div class="trust-row" aria-label="Principios de ARVI">
+          <span>Implementación acompañada</span>
+          <span>Salida a humano</span>
+          <span>Procesos verificables</span>
         </div>
-      </section>
+      </div>
 
-      <section class="spotlight-card hidden" id="featuredCard" aria-labelledby="featuredTitle">
-        <div class="spotlight-copy">
-          <span class="status-badge" id="featuredBadge">Destacado</span>
-          <h2 id="featuredTitle"></h2>
-          <p id="featuredDescription"></p>
+      <div class="mascot-stage" aria-label="Mascota oficial de ARVI">
+        <span class="mascot-label">ARVI está trabajando</span>
+        <div class="mascot-image-wrap">
+          <img class="mascot-image" src="https://res.cloudinary.com/dmh6nxvur/image/upload/v1788451872/arvi/brand/arvi-mascota.png" alt="Mascota oficial de ARVI" />
         </div>
-        <a class="button button-primary" id="featuredButton" href="#">Abrir</a>
-      </section>
+        <div class="stage-chip one"><strong>Responde</strong><span>Atiende consultas y recoge el contexto que necesita.</span></div>
+        <div class="stage-chip two"><strong>Ejecuta</strong><span>Consulta agenda, reglas, estados y herramientas del negocio.</span></div>
+        <div class="stage-chip three"><strong>Escala</strong><span>Entrega el caso a una persona cuando hace falta criterio.</span></div>
+      </div>
+    </div>
+  </section>
 
-      <section class="section-block" aria-labelledby="ecosistemaTitle">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Ecosistema Arvi</p>
-            <h2 id="ecosistemaTitle">Empieza por la puerta que hoy más te sirve.</h2>
-          </div>
-          <p>
-            No todo el mundo necesita lo mismo. Algunas personas quieren automatizar, otras aprender y otras aterrizar procesos para su equipo.
-          </p>
+  <section class="proof-strip" aria-label="Qué hace ARVI">
+    <div class="container proof-grid">
+      <div class="proof-item"><strong>WhatsApp</strong><span>Convierte el canal de mensajes en un canal operativo.</span></div>
+      <div class="proof-item"><strong>Agenda y seguimiento</strong><span>Automatiza lo repetitivo sin inventar disponibilidad.</span></div>
+      <div class="proof-item"><strong>Procesos reales</strong><span>Se conecta con reglas, estados y herramientas del negocio.</span></div>
+      <div class="proof-item"><strong>Humano cuando importa</strong><span>La IA prepara. Tu equipo decide donde corresponde.</span></div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow dark">Tecnología amable para negocios reales</p>
+          <h2>Tu negocio no necesita parecer más tecnológico. Necesita trabajar mejor.</h2>
         </div>
+        <p>Cuando WhatsApp concentra ventas, reservas, preguntas y seguimiento, responder tarde o depender de la memoria de alguien termina costando tiempo, oportunidades y servicio.</p>
+      </div>
+      <div class="cards three">
+        <article class="card"><span class="card-number">01</span><h3>Conversaciones que se enfrían</h3><p>Un cliente escribe interesado, espera demasiado y termina resolviendo en otro lado.</p></article>
+        <article class="card"><span class="card-number">02</span><h3>Trabajo que se repite</h3><p>El equipo responde las mismas preguntas, confirma lo mismo y persigue los mismos pendientes todos los días.</p></article>
+        <article class="card"><span class="card-number">03</span><h3>Información que no conversa</h3><p>El mensaje queda en WhatsApp, la cita en otro lugar y el siguiente paso en la cabeza de alguien.</p></article>
+      </div>
+    </div>
+  </section>
 
-        <div class="primary-grid" id="primaryGrid"></div>
-      </section>
+  <section class="section dark-section" id="como-funciona">
+    <div class="container">
+      <div class="section-heading split inverted">
+        <div><p class="eyebrow">Cómo funciona ARVI</p><h2>La conversación es la entrada. El proceso es lo que importa.</h2></div>
+        <p>Diseñamos qué puede resolver ARVI, qué información debe consultar, qué acción puede ejecutar y en qué momento debe pasar el caso a tu equipo.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-item"><strong>Cliente escribe</strong><span>WhatsApp y otros canales conectados</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>ARVI entiende</strong><span>Intención, contexto y datos necesarios</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Consulta y actúa</strong><span>Agenda · estados · seguimiento · herramientas</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item"><strong>Tu equipo decide</strong><span>Cuando hay excepción, negociación o criterio</span></div>
+      </div>
+    </div>
+  </section>
 
-      <section class="section-block" aria-labelledby="quickLinksTitle">
-        <div class="section-heading compact">
-          <div>
-            <p class="eyebrow">Accesos rápidos</p>
-            <h2 id="quickLinksTitle">Más formas de conectar con Arvi.</h2>
-          </div>
+  <section class="section light" id="soluciones">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark">Soluciones</p>
+        <h2>Automatización que sí aterriza en el trabajo diario.</h2>
+        <p class="section-intro">ARVI empieza por un problema concreto y crece por módulos. No te vendemos una lista de funciones que después nadie usa.</p>
+      </div>
+      <div class="cards three">
+        <a class="card service-card accent-cyan" href="/chatbot-whatsapp-ia"><span class="service-kicker">WHATSAPP</span><h3>Atención con IA</h3><p>Responde consultas, recoge información y mantiene el contexto sin convertir cada chat en una tarea manual.</p><b>Conocer solución →</b></a>
+        <a class="card service-card accent-violet" href="/agentes-ia"><span class="service-kicker">AGENTES IA</span><h3>Agentes que trabajan con herramientas</h3><p>Consultan información, siguen reglas y preparan acciones dentro del flujo real de la empresa.</p><b>Conocer solución →</b></a>
+        <a class="card service-card accent-green" href="/automatizacion-procesos"><span class="service-kicker">AUTOMATIZACIÓN</span><h3>Procesos conectados</h3><p>Une conversaciones, calendarios, formularios, CRM y seguimiento para que el trabajo no quede partido.</p><b>Conocer solución →</b></a>
+        <a class="card service-card" href="/sectores/belleza"><span class="service-kicker">ARVI AGENDA</span><h3>Citas y recordatorios</h3><p>Disponibilidad calculada con reglas reales, confirmaciones, recordatorios y reprogramaciones.</p><b>Conocer ARVI Agenda →</b></a>
+        <a class="card service-card" href="/calculadora-roi"><span class="service-kicker">MÉTRICAS</span><h3>ROI y oportunidad</h3><p>Estima horas, costo operativo y oportunidad antes de decidir qué conviene automatizar.</p><b>Calcular →</b></a>
+        <a class="card service-card" href="/recursos/chatbot-vs-agente-ia"><span class="service-kicker">HÍBRIDO</span><h3>IA + personas</h3><p>ARVI resuelve lo repetitivo y tu equipo entra cuando el caso necesita criterio, negociación o excepción.</p><b>Entender la diferencia →</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section" id="sectores">
+    <div class="container">
+      <div class="section-heading split">
+        <div><p class="eyebrow dark">Soluciones por operación</p><h2>Cuando conocemos el proceso, podemos empaquetarlo mejor.</h2></div>
+        <p>ARVI Agenda y ARVI Recepción nacen de operaciones concretas. Para otros sectores diseñamos el flujo alrededor de sus reglas, datos y decisiones reales.</p>
+      </div>
+      <div class="sector-grid">
+        <a href="/sectores/belleza"><span>AGENDA</span><h3>ARVI Agenda</h3><p>Para salones y bienestar: servicios, profesionales, disponibilidad real, abonos, recordatorios y reprogramaciones.</p></a>
+        <a href="/sectores/hoteles"><span>RECEPCIÓN</span><h3>ARVI Recepción</h3><p>Para hoteles y alojamientos: consultas, reservas, pre-llegada, solicitudes del huésped y seguimiento.</p></a>
+        <a href="/sectores/consultorios"><span>SERVICIOS</span><h3>Consultorios y servicios</h3><p>Agenda y gestión administrativa con límites claros para información sensible.</p></a>
+        <a href="/sectores/pymes"><span>PROCESOS</span><h3>PYMES y equipos</h3><p>Atención, ventas y procesos administrativos conectados con herramientas reales.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="case-band">
+        <div class="case-visual">
+          <p class="eyebrow">Caso real · ARVI Agenda</p>
+          <strong>Conversar no es lo mismo que operar.</strong>
         </div>
-        <div class="quick-grid" id="quickGrid"></div>
-      </section>
-
-      <section class="principles-grid" aria-label="Principios de Arvi">
-        <article>
-          <strong>Aplicado a la vida real</strong>
-          <p>No vendemos humo tecnológico. Bajamos la IA a procesos y necesidades concretas.</p>
-        </article>
-        <article>
-          <strong>Tecnología con criterio</strong>
-          <p>La automatización organiza, acelera y acompaña. Las decisiones importantes siguen siendo humanas.</p>
-        </article>
-        <article>
-          <strong>Un ecosistema, no una pieza suelta</strong>
-          <p>Agente IA, formación y soluciones conectadas para que Arvi sí trabaje a tu favor.</p>
-        </article>
-      </section>
-
-      <footer class="site-footer">
-        <div class="footer-copy">
-          <strong>Arvi</strong>
-          <p>Una iniciativa de Arvi y Rohi Group.</p>
+        <div class="case-copy">
+          <h3>Una agenda de belleza nos enseñó dónde termina la IA y empieza la lógica del negocio.</h3>
+          <p>ARVI puede entender que una clienta quiere una cita. Pero la disponibilidad no se improvisa: se calcula con servicio, duración, horarios, bloqueos y citas existentes. Documentamos el caso sin inventar métricas.</p>
+          <a class="button button-secondary" href="/casos/agenda-belleza-whatsapp">Leer el caso</a>
         </div>
-        <div class="footer-links" id="footerLinks"></div>
-      </footer>
-    </main>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow dark">Antes de comprar</p><h2>Entiende el problema antes de pagar por la solución.</h2></div>
+      <div class="cards three">
+        <a class="card service-card" href="/diagnostico"><span class="service-kicker">DIAGNÓSTICO</span><h3>¿Qué vale la pena automatizar?</h3><p>Ordena el problema y revisa por dónde tendría sentido empezar.</p><b>Hacer diagnóstico →</b></a>
+        <a class="card service-card" href="/calculadora-roi"><span class="service-kicker">ROI</span><h3>¿Cuánto tiempo te está costando?</h3><p>Calcula horas, costo operativo y oportunidad con tus propios números.</p><b>Calcular →</b></a>
+        <a class="card service-card" href="/precios"><span class="service-kicker">INVERSIÓN</span><h3>¿Cómo se cobra ARVI?</h3><p>Separamos implementación, operación y evolución para que el alcance sea claro.</p><b>Ver precios →</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading split"><div><p class="eyebrow dark">Implementación acompañada</p><h2>ARVI no se instala y desaparece.</h2></div><p>Levantamos el proceso, definimos límites, implementamos, probamos casos reales y medimos. La automatización útil se opera y se mejora.</p></div>
+      <ol class="steps">
+        <li><span>01</span><strong>Diagnóstico</strong><p>Volumen, fricción y oportunidad.</p></li>
+        <li><span>02</span><strong>Diseño</strong><p>Qué resuelve, consulta y escala.</p></li>
+        <li><span>03</span><strong>Implementación</strong><p>Canales, reglas y herramientas.</p></li>
+        <li><span>04</span><strong>Pruebas</strong><p>Casos normales y excepciones.</p></li>
+        <li><span>05</span><strong>Mejora</strong><p>Horas, errores y conversiones.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-box">
+      <p class="eyebrow">Automatiza y vive.</p>
+      <h2>Tu negocio debería poder responder aunque tú estés haciendo tu trabajo.</h2>
+      <p>Cuéntanos qué proceso te quita tiempo. Revisamos qué puede hacer ARVI y qué debe seguir en manos de una persona.</p>
+      <div class="hero-actions centered">
+        <a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20revisar%20qu%C3%A9%20puedo%20automatizar%20con%20ARVI." rel="noopener">Hablar con ARVI</a>
+        <a class="button button-secondary" href="/recursos">Explorar recursos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales. Una marca de Rohi Group S.A.S.</p></div>
+    <div><strong>Soluciones</strong><a href="/sectores/belleza">ARVI Agenda</a><a href="/sectores/hoteles">ARVI Recepción</a><a href="/automatizacion-procesos">Automatización</a><a href="/precios">Precios</a></div>
+    <div><strong>Aprende</strong><a href="/recursos">Recursos</a><a href="/casos/agenda-belleza-whatsapp">Casos</a><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div>
+    <div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><a href="mailto:rohigroupsas@gmail.com">rohigroupsas@gmail.com</a><span>Valledupar, Colombia</span></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 ARVI · Rohi Group S.A.S.</span><span>Automatiza y vive.</span></div>
+</footer>
+</body>
 </html>
