@@ -4,39 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F8FAFC" />
-  <title>Precios ARVI | ARVI Agenda y automatización con IA en Colombia</title>
-  <meta name="description" content="ARVI Agenda Esencial desde $490.000 COP de implementación + $199.000 COP/mes. Proyectos ARVI a medida desde $890.000 COP de implementación, según procesos, integraciones y operación." />
+  <title>Precios ARVI | Automatización e IA para negocios en Colombia</title>
+  <meta name="description" content="Precios ARVI en Colombia: Inicio desde $1.690.000 COP, Pro $4.490.000 COP y proyectos a medida desde $8.990.000 COP, más operación mensual según alcance." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <link rel="canonical" href="https://arvi.rohigroup.co/precios" />
   <link rel="stylesheet" href="/site.css" />
   <style>
     .pricing-page .hero-grid{min-height:620px;padding:58px 0 74px;gap:clamp(44px,6vw,82px);align-items:center}
-    .pricing-page .hero h1{max-width:690px;font-size:clamp(43px,5.1vw,66px);line-height:1.04;letter-spacing:-.028em}
+    .pricing-page .hero h1{max-width:720px;font-size:clamp(43px,5.1vw,66px);line-height:1.04;letter-spacing:-.028em}
     .pricing-page .hero h1 span{color:var(--arvi-green)}
-    .pricing-page .hero-lead{max-width:680px}
+    .pricing-page .hero-lead{max-width:690px}
     .pricing-card{padding:30px;border:1px solid var(--line);border-radius:26px;background:var(--white);box-shadow:var(--shadow-md)}
     .price-option{padding:18px 0;border-bottom:1px solid var(--line)}
-    .price-option:first-of-type{padding-top:6px}
-    .price-option:last-of-type{padding-bottom:0;border-bottom:0}
-    .price-option h2{margin:7px 0 8px;color:var(--arvi-green);font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(28px,3vw,40px);line-height:1.08;letter-spacing:-.02em}
-    .price-option h3{margin:7px 0 8px;color:var(--arvi-blue);font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(22px,2.5vw,30px);line-height:1.1;letter-spacing:-.018em}
+    .price-option:first-of-type{padding-top:6px}.price-option:last-of-type{padding-bottom:0;border-bottom:0}
+    .price-option h2,.price-option h3{margin:7px 0 8px;font-family:"Plus Jakarta Sans",sans-serif;line-height:1.08;letter-spacing:-.02em}
+    .price-option h2{color:var(--arvi-green);font-size:clamp(28px,3vw,40px)}
+    .price-option h3{color:var(--arvi-blue);font-size:clamp(24px,2.7vw,34px)}
     .price-option p{margin:0;color:var(--tech-500);line-height:1.6}
     .price-option .monthly{display:block;margin-top:8px;color:var(--tech-800);font-weight:700}
+    .price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+    .plan{display:flex;flex-direction:column;min-height:520px;padding:30px;border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:var(--shadow-sm)}
+    .plan.featured{border-color:#22c55e;box-shadow:0 22px 60px rgba(34,197,94,.14)}
+    .plan .tag{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--arvi-green)}
+    .plan h3{margin:10px 0 4px;font-family:"Plus Jakarta Sans",sans-serif;font-size:30px;color:var(--arvi-blue)}
+    .plan .price{margin:22px 0 0;font-size:36px;font-weight:800;color:var(--tech-900);letter-spacing:-.03em}
+    .plan .price-note{font-size:13px;color:var(--tech-500)}
+    .plan ul{padding-left:20px;color:var(--tech-600);line-height:1.7}
+    .plan .button{margin-top:auto;align-self:flex-start}
+    .monthly-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:30px}
+    .monthly-card{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff}
+    .monthly-card strong{display:block;margin-top:6px;font-size:24px;color:var(--arvi-blue)}
     .pricing-page .section-heading h2,.pricing-page .cta-box h2{letter-spacing:-.02em}
-    @media(max-width:980px){.pricing-page .hero-grid{min-height:auto;padding:52px 0 66px}.pricing-card{max-width:680px}}
-    @media(max-width:640px){.pricing-page .hero h1{font-size:42px;letter-spacing:-.018em}.pricing-card{padding:22px;border-radius:22px}}
+    @media(max-width:980px){.pricing-page .hero-grid{min-height:auto;padding:52px 0 66px}.pricing-card{max-width:680px}.price-grid,.monthly-grid{grid-template-columns:1fr}}
+    @media(max-width:640px){.pricing-page .hero h1{font-size:42px;letter-spacing:-.018em}.pricing-card,.plan{padding:22px;border-radius:22px}}
   </style>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
     "name":"ARVI — Automatización con IA para empresas",
-    "provider":{"@type":"Organization","@id":"https://rohigroup.co/#organization","name":"Rohi Group S.A.S.","url":"https://rohigroup.co/"},
+    "provider":{"@type":"Organization","@id":"https://www.rohigroup.co/#organization","name":"Rohi Group S.A.S.","url":"https://www.rohigroup.co/"},
     "brand":{"@type":"Brand","@id":"https://arvi.rohigroup.co/#brand","name":"ARVI","url":"https://arvi.rohigroup.co/"},
     "areaServed":{"@type":"Country","name":"Colombia"},
     "offers":[
-      {"@type":"Offer","name":"ARVI Agenda Esencial","priceCurrency":"COP","price":"490000","description":"Implementación desde COP $490.000. Operación desde COP $199.000 mensuales."},
-      {"@type":"Offer","name":"ARVI a medida","priceCurrency":"COP","price":"890000","description":"Implementaciones a medida desde COP $890.000. El precio final depende del proceso, integraciones, volumen y soporte."}
+      {"@type":"Offer","name":"ARVI Inicio","priceCurrency":"COP","price":"1690000","description":"Implementación desde COP $1.690.000. Operación desde COP $179.000 mensuales."},
+      {"@type":"Offer","name":"ARVI Pro","priceCurrency":"COP","price":"4490000","description":"Implementación COP $4.490.000. Operación desde COP $449.000 mensuales."},
+      {"@type":"Offer","name":"ARVI a medida","priceCurrency":"COP","price":"8990000","description":"Implementaciones a medida desde COP $8.990.000. Operación desde COP $799.000 mensuales según alcance."}
     ]
   }
   </script>
@@ -46,10 +59,10 @@
   <div class="container nav-wrap">
     <a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a>
     <nav class="nav-links" aria-label="Navegación principal">
-      <a href="/sectores/belleza">ARVI Agenda</a>
-      <a href="/sectores/hoteles">ARVI Recepción</a>
+      <a href="/sectores/belleza">Agenda</a>
+      <a href="/sectores/hoteles">Recepción</a>
       <a href="/automatizacion-procesos">Procesos</a>
-      <a href="/calculadora-roi">Calculadora ROI</a>
+      <a href="/calculadora-roi">ROI</a>
     </nav>
     <a class="button button-small button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20para%20mi%20negocio.">Cotizar</a>
   </div>
@@ -60,95 +73,69 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow dark">Precios ARVI · Colombia</p>
-        <h1>Un producto cuando el proceso se repite. Una solución a medida cuando <span>no.</span></h1>
-        <p class="hero-lead">ARVI Agenda tiene un alcance más estandarizado y por eso puede entrar con una inversión menor. Los demás proyectos se cotizan según decisiones, integraciones, volumen y acompañamiento operativo.</p>
+        <h1>Tres niveles para empezar con ARVI según la <span>complejidad real.</span></h1>
+        <p class="hero-lead">Rohi Group implementa ARVI alrededor del proceso del negocio. El precio separa implementación, operación mensual y evolución para que sepas qué estás comprando desde el inicio.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/diagnostico">Diagnosticar mi caso</a>
-          <a class="button button-secondary" href="/calculadora-roi">Calcular oportunidad</a>
+          <a class="button button-primary" href="#planes">Ver planes</a>
+          <a class="button button-secondary" href="/diagnostico">Diagnosticar mi caso</a>
         </div>
       </div>
 
-      <aside class="pricing-card" aria-label="Puntos de entrada de ARVI">
-        <p class="eyebrow dark">Dos puertas de entrada</p>
-        <div class="price-option">
-          <span class="service-kicker">ARVI AGENDA</span>
-          <h2>Desde $490.000 COP</h2>
-          <p>Implementación de ARVI Agenda Esencial para negocios de belleza y bienestar.</p>
-          <span class="monthly">Operación desde $199.000 COP/mes</span>
-        </div>
-        <div class="price-option">
-          <span class="service-kicker">ARVI A MEDIDA</span>
-          <h3>Desde $890.000 COP</h3>
-          <p>Implementación inicial para un proceso empresarial acotado. Operación e integraciones se cotizan según alcance.</p>
-        </div>
+      <aside class="pricing-card" aria-label="Resumen de precios ARVI">
+        <p class="eyebrow dark">Puntos de entrada</p>
+        <div class="price-option"><span class="service-kicker">ARVI INICIO</span><h2>$1.690.000 COP</h2><p>Primer flujo útil para atención, captura, clasificación y salida a humano.</p><span class="monthly">Operación desde $179.000 COP/mes</span></div>
+        <div class="price-option"><span class="service-kicker">ARVI PRO</span><h3>$4.490.000 COP</h3><p>Agenda, seguimiento, reglas avanzadas y varias integraciones.</p><span class="monthly">Operación desde $449.000 COP/mes</span></div>
+        <div class="price-option"><span class="service-kicker">ARVI A MEDIDA</span><h3>Desde $8.990.000 COP</h3><p>Procesos complejos, varias áreas o necesidades específicas.</p><span class="monthly">Operación desde $799.000 COP/mes</span></div>
       </aside>
     </div>
   </section>
 
-  <section class="section light">
+  <section id="planes" class="section light">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow dark">Productos y alcance</p>
-        <h2>No todas las automatizaciones cuestan lo mismo porque no todas hacen lo mismo.</h2>
-        <p class="section-intro">Cuando ya conocemos bien una operación podemos empaquetarla. Cuando el proceso es particular, primero lo diagnosticamos.</p>
+        <p class="eyebrow dark">Planes ARVI</p>
+        <h2>El mismo producto, distintos niveles de profundidad.</h2>
+        <p class="section-intro">El alcance final se confirma antes de iniciar. Si tu caso no cabe en un plan estándar, se cotiza como solución a medida.</p>
       </div>
-      <div class="cards three">
-        <a class="card service-card" href="/sectores/belleza"><span class="service-kicker">ARVI AGENDA</span><h3>Agenda Esencial</h3><p><strong>$490.000 COP de implementación + desde $199.000 COP/mes.</strong><br><br>Atención y agenda por WhatsApp con servicios, profesionales, disponibilidad real, confirmaciones, recordatorios y salida a humano.</p><b>Ver ARVI Agenda →</b></a>
-        <a class="card service-card" href="/sectores/hoteles"><span class="service-kicker">ARVI RECEPCIÓN</span><h3>Recepción hotelera</h3><p>Atención antes, durante y después de la estadía. Se cotiza según fuentes de información, reservas, solicitudes, integraciones y operación requerida.</p><b>Ver ARVI Recepción →</b></a>
-        <article class="card"><span class="service-kicker">ARVI A MEDIDA</span><h3>Desde $890.000 COP</h3><p>Para atención, ventas o procesos administrativos que requieren diseño específico, reglas, herramientas, estados o integraciones propias del negocio.</p></article>
+      <div class="price-grid">
+        <article class="plan"><span class="tag">ARVI INICIO</span><h3>Primer flujo</h3><div class="price">$1.690.000</div><div class="price-note">implementación + IVA</div><ul><li>WhatsApp como canal principal</li><li>3–5 flujos conversacionales</li><li>FAQ y contexto del negocio</li><li>1 integración</li><li>Handoff a persona</li><li>30 días de acompañamiento</li></ul><a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20Inicio.">Cotizar Inicio</a></article>
+        <article class="plan featured"><span class="tag">ARVI PRO · RECOMENDADO</span><h3>Agenda + seguimiento</h3><div class="price">$4.490.000</div><div class="price-note">implementación + IVA</div><ul><li>Todo lo de Inicio</li><li>Agenda o seguimiento</li><li>2–3 integraciones</li><li>Reglas y rutas avanzadas</li><li>Capacitación al equipo</li><li>60 días de acompañamiento</li></ul><a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20Pro.">Cotizar Pro</a></article>
+        <article class="plan"><span class="tag">ARVI A MEDIDA</span><h3>Procesos complejos</h3><div class="price">Desde $8.990.000</div><div class="price-note">implementación + IVA</div><ul><li>Varios flujos o áreas</li><li>Integraciones complejas</li><li>Módulos específicos</li><li>Rutas por proceso</li><li>Implementación acompañada</li><li>Alcance definido antes de iniciar</li></ul><a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20a%20medida.">Cotizar a medida</a></article>
       </div>
     </div>
   </section>
 
   <section class="section soft-section">
     <div class="container">
-      <div class="section-heading split">
-        <div><p class="eyebrow dark">Qué mueve el precio</p><h2>La complejidad está en el proceso, no en cuántos mensajes escribe el bot.</h2></div>
-        <p>Dos empresas pueden recibir el mismo número de chats y requerir arquitecturas completamente distintas. Estas son las variables que más cambian el alcance.</p>
-      </div>
-      <div class="cards three">
-        <article class="card"><span class="service-kicker">INTEGRACIONES</span><h3>Herramientas conectadas</h3><p>Calendario, CRM, base de datos, formularios, APIs, sistemas internos o herramientas de terceros.</p></article>
-        <article class="card"><span class="service-kicker">REGLAS</span><h3>Decisiones y excepciones</h3><p>Cuántos estados tiene el flujo, qué reglas debe respetar y qué ocurre cuando el caso se sale del camino esperado.</p></article>
-        <article class="card"><span class="service-kicker">OPERACIÓN</span><h3>Volumen y soporte</h3><p>Cantidad de conversaciones, consumo de modelos, monitoreo, soporte, ajustes y nivel de acompañamiento requerido.</p></article>
+      <div class="section-heading split"><div><p class="eyebrow dark">Operación mensual</p><h2>Implementación y funcionamiento se cobran por separado.</h2></div><p>La mensualidad cubre la operación continua de ARVI según volumen, soporte y nivel de acompañamiento. El alcance exacto se deja por escrito.</p></div>
+      <div class="monthly-grid">
+        <article class="monthly-card"><span class="service-kicker">BASE</span><strong>$179.000 / mes + IVA</strong><p>Monitoreo, ajustes menores y soporte operativo.</p></article>
+        <article class="monthly-card"><span class="service-kicker">PRO</span><strong>$449.000 / mes + IVA</strong><p>Mejora continua, integraciones supervisadas y soporte prioritario.</p></article>
+        <article class="monthly-card"><span class="service-kicker">BUSINESS</span><strong>$799.000 / mes + IVA</strong><p>Mayor volumen, reporting y acompañamiento de operación.</p></article>
       </div>
     </div>
   </section>
 
   <section class="section dark-section">
     <div class="container">
-      <div class="section-heading split inverted">
-        <div><p class="eyebrow">Cómo lo separamos</p><h2>Implementación, operación y evolución deben verse por separado.</h2></div>
-        <p>Así puedes entender qué pagas por construir, qué corresponde al funcionamiento mensual y qué es una ampliación futura del alcance.</p>
-      </div>
-      <div class="flow">
-        <div class="flow-item"><strong>Implementación</strong><span>Diseño + configuración + integraciones + pruebas</span></div><div class="flow-arrow">+</div>
-        <div class="flow-item"><strong>Operación mensual</strong><span>Infraestructura + consumo + soporte según plan</span></div><div class="flow-arrow">+</div>
-        <div class="flow-item"><strong>Módulos</strong><span>Nuevos procesos e integraciones</span></div><div class="flow-arrow">→</div>
-        <div class="flow-item"><strong>ROI</strong><span>Tiempo, conversiones, errores y seguimiento</span></div>
-      </div>
+      <div class="section-heading split inverted"><div><p class="eyebrow">Qué mueve el precio</p><h2>La complejidad está en el proceso, no en cuántos mensajes escribe el bot.</h2></div><p>Integraciones, reglas, excepciones, volumen, soporte y evolución pueden mover el alcance. Por eso primero diagnosticamos y después cerramos la propuesta.</p></div>
+      <div class="flow"><div class="flow-item"><strong>Implementación</strong><span>Diseño + configuración + pruebas</span></div><div class="flow-arrow">+</div><div class="flow-item"><strong>Operación</strong><span>Infraestructura + soporte</span></div><div class="flow-arrow">+</div><div class="flow-item"><strong>Evolución</strong><span>Nuevos módulos e integraciones</span></div><div class="flow-arrow">→</div><div class="flow-item"><strong>Resultado</strong><span>Menos tareas repetitivas + mejor seguimiento</span></div></div>
     </div>
   </section>
 
   <section class="section light">
     <div class="container">
-      <div class="section-heading"><p class="eyebrow dark">Antes de comprar</p><h2>Primero verifica si la automatización tiene sentido económico.</h2></div>
-      <div class="cards three">
-        <a class="card service-card" href="/calculadora-roi"><span class="service-kicker">ROI</span><h3>Calcula horas recuperables</h3><p>Estima cuánto tiempo consume hoy el proceso y cuánto representa en costo operativo.</p><b>Abrir calculadora →</b></a>
-        <a class="card service-card" href="/diagnostico"><span class="service-kicker">DIAGNÓSTICO</span><h3>Encuentra el cuello de botella</h3><p>Identifica si el problema está realmente en atención, seguimiento, agenda o administración.</p><b>Empezar diagnóstico →</b></a>
-        <a class="card service-card" href="/casos/agenda-belleza-whatsapp"><span class="service-kicker">CASO REAL</span><h3>Mira cómo lo resolvemos</h3><p>Cómo diseñamos ARVI Agenda sin dejar que la IA invente disponibilidad.</p><b>Leer caso →</b></a>
-      </div>
+      <div class="section-heading"><p class="eyebrow dark">Conectado con Rohi Group</p><h2>ARVI es la plataforma. Rohi diagnostica e implementa.</h2><p class="section-intro">Los mismos precios de ARVI se muestran también dentro del portafolio comercial de Rohi Group para que no existan dos catálogos distintos.</p></div>
+      <div class="hero-actions"><a class="button button-secondary" href="https://www.rohigroup.co/precios#arvi">Ver precios en Rohi Group</a><a class="button button-primary" href="/diagnostico">Hacer diagnóstico ARVI</a></div>
     </div>
   </section>
 
   <section class="cta-section">
     <div class="container cta-box">
       <p class="eyebrow">Cotización con alcance</p>
-      <h2>Cuéntanos el proceso y te decimos si encaja en un producto o necesita diseño a medida.</h2>
-      <p>Sin obligación de automatizar todo. La propuesta separa qué es crítico ahora, qué puede esperar y qué no tiene sentido automatizar.</p>
-      <div class="hero-actions centered">
-        <a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20para%20mi%20negocio.">Solicitar cotización</a>
-        <a class="button button-secondary" href="/diagnostico">Hacer diagnóstico</a>
-      </div>
+      <h2>Cuéntanos el proceso y te decimos en qué nivel encaja.</h2>
+      <p>Si no tiene sentido automatizarlo todavía, también debe salir de ese diagnóstico.</p>
+      <div class="hero-actions centered"><a class="button button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20cotizar%20ARVI%20para%20mi%20negocio.">Solicitar cotización</a><a class="button button-secondary" href="/calculadora-roi">Calcular oportunidad</a></div>
     </div>
   </section>
 </main>
@@ -157,8 +144,8 @@
   <div class="container footer-grid">
     <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales. Una marca de Rohi Group S.A.S.</p></div>
     <div><strong>Productos</strong><a href="/sectores/belleza">ARVI Agenda</a><a href="/sectores/hoteles">ARVI Recepción</a><a href="/automatizacion-procesos">ARVI a medida</a></div>
-    <div><strong>Decide</strong><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div>
-    <div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><span>Colombia</span></div>
+    <div><strong>Decide</strong><a href="/precios">Precios</a><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico</a></div>
+    <div><strong>Rohi Group</strong><a href="https://www.rohigroup.co/precios#arvi">Precios Rohi</a><a href="https://www.rohigroup.co/">rohigroup.co</a></div>
   </div>
 </footer>
 </body>
