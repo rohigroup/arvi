@@ -2,15 +2,27 @@
   const STORAGE_KEY = 'arvi_web_session_id';
   const HISTORY_KEY = 'arvi_web_chat_history';
   const MAX_HISTORY = 20;
+  const RETRY_DELAY_MS = 1200;
+  const MAX_SEND_ATTEMPTS = 8;
+
+  function opaqueId(prefix) {
+    const random = globalThis.crypto?.randomUUID
+      ? crypto.randomUUID()
+      : Math.random().toString(36).slice(2) + Date.now().toString(36);
+    return `${prefix}${random}`;
+  }
 
   function getSessionId() {
     let id = localStorage.getItem(STORAGE_KEY);
-    if (!id) {
-      const random = globalThis.crypto?.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36);
-      id = `web_${random}`;
+    if (!id || !/^web_[A-Za-z0-9_-]{8,160}$/.test(id)) {
+      id = opaqueId('web_');
       localStorage.setItem(STORAGE_KEY, id);
     }
     return id;
+  }
+
+  function newMessageId() {
+    return opaqueId('webmsg_');
   }
 
   function loadHistory() {
@@ -22,6 +34,41 @@
 
   function saveHistory(history) {
     localStorage.setItem(HISTORY_KEY, JSON.stringify(history.slice(-MAX_HISTORY)));
+  }
+
+  function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function requestChat(payload) {
+    let lastError = new Error('chat_failed');
+
+    for (let attempt = 0; attempt < MAX_SEND_ATTEMPTS; attempt += 1) {
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && response.status !== 202) return data;
+
+        if (response.status === 202 && data.pending === true) {
+          lastError = new Error('chat_pending');
+        } else if (response.status >= 500) {
+          lastError = new Error(data.error || 'chat_upstream_unavailable');
+        } else {
+          throw new Error(data.error || 'chat_failed');
+        }
+      } catch (error) {
+        lastError = error instanceof Error ? error : new Error('chat_failed');
+      }
+
+      if (attempt < MAX_SEND_ATTEMPTS - 1) await wait(RETRY_DELAY_MS);
+    }
+
+    throw lastError;
   }
 
   function createWidget() {
@@ -67,39 +114,72 @@
       row.appendChild(bubble);
       messages.appendChild(row);
       messages.scrollTop = messages.scrollHeight;
-      if (persist) { history.push({ role, text, ts: Date.now() }); saveHistory(history); }
+      if (persist) {
+        history.push({ role, text, ts: Date.now() });
+        saveHistory(history);
+      }
     }
 
-    if (history.length) history.forEach(m => addMessage(m.role, m.text, false));
+    if (history.length) history.forEach(message => addMessage(message.role, message.text, false));
     else addMessage('assistant', 'Hola 👋 Soy ARVI. Cuéntame qué quieres automatizar o qué duda tienes sobre nuestras soluciones.');
 
-    function openPanel() { panel.hidden = false; launcher.setAttribute('aria-expanded','true'); requestAnimationFrame(() => panel.classList.add('is-open')); setTimeout(() => input.focus(),80); }
-    function closePanel() { panel.classList.remove('is-open'); launcher.setAttribute('aria-expanded','false'); setTimeout(() => { panel.hidden = true; },180); }
+    function openPanel() {
+      panel.hidden = false;
+      launcher.setAttribute('aria-expanded', 'true');
+      requestAnimationFrame(() => panel.classList.add('is-open'));
+      setTimeout(() => input.focus(), 80);
+    }
+
+    function closePanel() {
+      panel.classList.remove('is-open');
+      launcher.setAttribute('aria-expanded', 'false');
+      setTimeout(() => { panel.hidden = true; }, 180);
+    }
+
     launcher.addEventListener('click', () => panel.hidden ? openPanel() : closePanel());
     close.addEventListener('click', closePanel);
-    input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
+    });
 
-    form.addEventListener('submit', async (event) => {
+    form.addEventListener('submit', async event => {
       event.preventDefault();
       const text = input.value.trim();
       if (!text) return;
+
+      const payload = {
+        session_id: getSessionId(),
+        message_id: newMessageId(),
+        message: text,
+        page: `${location.pathname}${location.search || ''}`,
+      };
+
       addMessage('user', text);
-      input.value = ''; input.disabled = true; status.hidden = false; handoff.hidden = true;
+      input.value = '';
+      input.disabled = true;
+      status.hidden = false;
+      handoff.hidden = true;
+
       try {
-        const response = await fetch('/api/chat', {
-          method:'POST', headers:{'Content-Type':'application/json'},
-          body:JSON.stringify({ channel:'web', session_id:getSessionId(), message:text, page:`${location.pathname}${location.search || ''}`, tenant:'rohi-group' })
-        });
-        const data = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(data.error || 'chat_failed');
-        addMessage('assistant', String(data.response || 'No pude responder en este momento. Intenta de nuevo.'));
+        const data = await requestChat(payload);
+        const reply = String(data.response || '').trim();
+        if (!reply) throw new Error('empty_chat_response');
+        addMessage('assistant', reply);
         if (data.handoff === true) handoff.hidden = false;
       } catch (error) {
         addMessage('assistant', 'Tuve un problema para responder. Puedes intentarlo de nuevo en unos segundos.');
         console.error('[ARVI web chat]', error);
-      } finally { input.disabled = false; status.hidden = true; input.focus(); }
+      } finally {
+        input.disabled = false;
+        status.hidden = true;
+        input.focus();
+      }
     });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', createWidget); else createWidget();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', createWidget);
+  else createWidget();
 })();

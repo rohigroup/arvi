@@ -22,20 +22,32 @@ La bubble flotante deja de ser un simple acceso a WhatsApp y se convierte en un 
 
 Arquitectura:
 
-`browser -> /api/chat -> n8n web adapter -> ARVI core -> /api/chat -> browser`
+`browser -> /api/chat -> ARVI Control Hub /api/web-chat -> canonical conversation/messages -> n8n -> Control Hub -> /api/chat -> browser`
+
+Autoridad:
+- el navegador solo aporta `session_id`, `message_id`, `message` y `page`;
+- el navegador no puede elegir tenant, canal ni `site_key`;
+- la web pública conserva únicamente un facade same-origin;
+- Control Hub resuelve tenant/canal y es la fuente de verdad de conversación, mensajes, idempotencia y handoff;
+- n8n orquesta el turno de IA, pero no es el ledger canónico.
 
 Archivos del bloque:
-- `web-chat-v1.js` — cliente, sesión anónima persistente, historial local y panel de conversación.
+- `web-chat-v1.js` — cliente, sesión anónima persistente, id por turno, retry idempotente, historial local y panel de conversación.
 - `web-chat-v1.css` — UI responsive del panel.
 - `web-chat-loader.js` — loader reutilizable para superficies estáticas.
-- `api/chat.js` — proxy server-side; valida contrato y mantiene oculta la URL de n8n.
+- `api/chat.js` — proxy server-side hacia Control Hub; no expone credenciales ni acepta autoridad del navegador.
+- `api/page.js` — sirve las superficies comerciales allowlisted e inyecta el loader de forma determinística.
 
-Variables server-side esperadas:
-- `ARVI_WEBCHAT_N8N_URL`
-- `ARVI_WEBCHAT_SECRET` (opcional si el webhook se protege por otro mecanismo)
+Variables server-side esperadas en el sitio público:
+- `ARVI_CONTROL_HUB_WEB_CHAT_URL`
+- `ARVI_CONTROL_HUB_WEB_CHAT_TOKEN`
+- `ARVI_WEB_CHAT_SITE_KEY` (opcional; por defecto `arvi-public-site`)
 
-Contrato web:
-`channel`, `session_id`, `message`, `page`, `tenant`.
+Contrato browser → `/api/chat`:
+- `session_id`
+- `message_id`
+- `message`
+- `page`
 
 WhatsApp queda como handoff opcional, no como transporte principal de la bubble.
 
@@ -56,6 +68,8 @@ WhatsApp queda como handoff opcional, no como transporte principal de la bubble.
 ## Despliegue
 
 El proyecto no necesita npm ni compilación. Vercel sirve HTML/CSS/JS estático y funciones serverless bajo `/api`.
+
+El Web Chat debe permanecer en PREPARE hasta que Control Hub tenga migraciones/canal/secrets validados en un entorno seguro y se complete una aceptación end-to-end en preview. No se debe apuntar la web pública directamente a n8n.
 
 ## Próximas capas de posicionamiento
 
