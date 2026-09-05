@@ -16,6 +16,29 @@ La raíz `arvi.rohigroup.co` funciona como sitio comercial e indexable. La arqui
 - `/diagnostico` — herramienta de diagnóstico.
 - `/links` — hub del ecosistema ARVI, preservado para bio y accesos rápidos.
 
+## Web Chat ARVI V1
+
+La bubble flotante deja de ser un simple acceso a WhatsApp y se convierte en un chat web embebido.
+
+Arquitectura:
+
+`browser -> /api/chat -> n8n web adapter -> ARVI core -> /api/chat -> browser`
+
+Archivos del bloque:
+- `web-chat-v1.js` — cliente, sesión anónima persistente, historial local y panel de conversación.
+- `web-chat-v1.css` — UI responsive del panel.
+- `web-chat-loader.js` — loader reutilizable para superficies estáticas.
+- `api/chat.js` — proxy server-side; valida contrato y mantiene oculta la URL de n8n.
+
+Variables server-side esperadas:
+- `ARVI_WEBCHAT_N8N_URL`
+- `ARVI_WEBCHAT_SECRET` (opcional si el webhook se protege por otro mecanismo)
+
+Contrato web:
+`channel`, `session_id`, `message`, `page`, `tenant`.
+
+WhatsApp queda como handoff opcional, no como transporte principal de la bubble.
+
 ## SEO
 
 - `robots.txt` expone el sitemap.
@@ -32,7 +55,7 @@ La raíz `arvi.rohigroup.co` funciona como sitio comercial e indexable. La arqui
 
 ## Despliegue
 
-El proyecto no necesita npm ni compilación. Vercel sirve HTML/CSS/JS estático y la función `api/click.js` para instrumentación básica de clics del hub.
+El proyecto no necesita npm ni compilación. Vercel sirve HTML/CSS/JS estático y funciones serverless bajo `/api`.
 
 ## Próximas capas de posicionamiento
 
