@@ -12,30 +12,28 @@
       "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }],
       "destination": "/diagnostico",
       "permanent": false
-    }
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/chatbot-whatsapp-ia.html", "destination": "/chatbot-whatsapp-ia", "permanent": true },
+    { "source": "/agentes-ia.html", "destination": "/agentes-ia", "permanent": true },
+    { "source": "/automatizacion-procesos.html", "destination": "/automatizacion-procesos", "permanent": true },
+    { "source": "/sectores-belleza.html", "destination": "/sectores/belleza", "permanent": true },
+    { "source": "/sectores-hoteles.html", "destination": "/sectores/hoteles", "permanent": true },
+    { "source": "/sectores/consultorios.html", "destination": "/sectores/consultorios", "permanent": true },
+    { "source": "/sectores/pymes.html", "destination": "/sectores/pymes", "permanent": true },
+    { "source": "/casos/agenda-belleza-whatsapp.html", "destination": "/casos/agenda-belleza-whatsapp", "permanent": true },
+    { "source": "/recursos.html", "destination": "/recursos", "permanent": true },
+    { "source": "/recurso-chatbot-vs-agente-ia.html", "destination": "/recursos/chatbot-vs-agente-ia", "permanent": true },
+    { "source": "/recursos/cuanto-cuesta-chatbot-whatsapp-colombia.html", "destination": "/recursos/cuanto-cuesta-chatbot-whatsapp-colombia", "permanent": true },
+    { "source": "/recursos/automatizar-citas-whatsapp.html", "destination": "/recursos/automatizar-citas-whatsapp", "permanent": true },
+    { "source": "/precios.html", "destination": "/precios", "permanent": true },
+    { "source": "/calculadora-roi.html", "destination": "/calculadora-roi", "permanent": true },
+    { "source": "/links.html", "destination": "/links", "permanent": true }
   ],
   "rewrites": [
     { "source": "/", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
     { "source": "/:path*", "has": [{ "type": "host", "value": "diagnostico.arvi.rohigroup.co" }], "destination": "/api/diagnostico" },
     { "source": "/:path*", "has": [{ "type": "host", "value": "agente.arvi.rohigroup.co" }], "destination": "/agente-v2.html" },
-
-    { "source": "/index.html", "destination": "/api/page?file=index.html" },
-    { "source": "/chatbot-whatsapp-ia.html", "destination": "/api/page?file=chatbot-whatsapp-ia.html" },
-    { "source": "/agentes-ia.html", "destination": "/api/page?file=agentes-ia.html" },
-    { "source": "/automatizacion-procesos.html", "destination": "/api/page?file=automatizacion-procesos.html" },
-    { "source": "/sectores-belleza.html", "destination": "/api/page?file=sectores-belleza.html" },
-    { "source": "/sectores-hoteles.html", "destination": "/api/page?file=sectores-hoteles.html" },
-    { "source": "/sectores/consultorios.html", "destination": "/api/page?file=sectores/consultorios.html" },
-    { "source": "/sectores/pymes.html", "destination": "/api/page?file=sectores/pymes.html" },
-    { "source": "/casos/agenda-belleza-whatsapp.html", "destination": "/api/page?file=casos/agenda-belleza-whatsapp.html" },
-    { "source": "/recursos.html", "destination": "/api/page?file=recursos.html" },
-    { "source": "/recurso-chatbot-vs-agente-ia.html", "destination": "/api/page?file=recurso-chatbot-vs-agente-ia.html" },
-    { "source": "/recursos/cuanto-cuesta-chatbot-whatsapp-colombia.html", "destination": "/api/page?file=recursos/cuanto-cuesta-chatbot-whatsapp-colombia.html" },
-    { "source": "/recursos/automatizar-citas-whatsapp.html", "destination": "/api/page?file=recursos/automatizar-citas-whatsapp.html" },
-    { "source": "/precios.html", "destination": "/api/page?file=precios.html" },
-    { "source": "/calculadora-roi.html", "destination": "/api/page?file=calculadora-roi.html" },
-    { "source": "/links.html", "destination": "/api/page?file=links.html" },
-
     { "source": "/chatbot-whatsapp-ia", "destination": "/api/page?file=chatbot-whatsapp-ia.html" },
     { "source": "/agentes-ia", "destination": "/api/page?file=agentes-ia.html" },
     { "source": "/automatizacion-procesos", "destination": "/api/page?file=automatizacion-procesos.html" },
@@ -52,8 +50,7 @@
     { "source": "/calculadora-roi", "destination": "/api/page?file=calculadora-roi.html" },
     { "source": "/agente", "destination": "/agente-v2.html" },
     { "source": "/diagnostico", "destination": "/api/diagnostico" },
-    { "source": "/links", "destination": "/api/page?file=links.html" },
-    { "source": "/", "destination": "/api/page?file=index.html" }
+    { "source": "/links", "destination": "/api/page?file=links.html" }
   ],
   "headers": [
     {
