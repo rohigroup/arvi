@@ -564,3 +564,59 @@ code,.metric,.mono { font-family:"JetBrains Mono",monospace; }
   .monthly-card:hover,
   .plan:hover { translate:0 0; }
 }
+
+/* Floating ARVI contact bubble. It reuses each page's contextual WhatsApp CTA. */
+.topbar a.button-primary[href^="https://wa.me/573183074381"] { overflow:visible; }
+.topbar a.button-primary[href^="https://wa.me/573183074381"]::before {
+  content:"Hablar con ARVI";
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  width:auto;
+  min-width:176px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  padding:0 18px 0 58px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  color:#fff;
+  background-image:var(--isotipo-url),linear-gradient(135deg,var(--tech-950),var(--arvi-blue));
+  background-size:34px 34px,100% 100%;
+  background-position:12px center,center;
+  background-repeat:no-repeat,no-repeat;
+  font-family:"Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:0;
+  box-shadow:0 18px 48px rgba(0,58,112,.30),0 0 0 1px rgba(34,197,94,.08);
+  opacity:1;
+  translate:0 0;
+  transition:translate .22s ease,box-shadow .22s ease;
+}
+.topbar a.button-primary[href^="https://wa.me/573183074381"]:hover::before {
+  translate:0 -4px;
+  box-shadow:0 24px 58px rgba(0,58,112,.38),0 0 0 4px rgba(34,197,94,.08);
+}
+@media (prefers-reduced-motion:no-preference) {
+  .topbar a.button-primary[href^="https://wa.me/573183074381"]::before { animation:arvi-bubble-in .55s .8s cubic-bezier(.2,.8,.2,1) both; }
+}
+@keyframes arvi-bubble-in {
+  from { opacity:0; translate:0 18px; }
+  to { opacity:1; translate:0 0; }
+}
+@media (max-width:640px) {
+  .topbar a.button-primary[href^="https://wa.me/573183074381"]::before {
+    content:"";
+    right:14px;
+    bottom:14px;
+    width:58px;
+    min-width:58px;
+    height:58px;
+    padding:0;
+    background-size:36px 36px,100% 100%;
+    background-position:center,center;
+  }
+}
