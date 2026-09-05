@@ -375,3 +375,248 @@ code,.metric,.mono { font-family:"JetBrains Mono",monospace; }
   .conversation-card,.pricing-card,.roi-panel { padding:22px; border-radius:20px; }
   .footer-bottom { flex-direction:column; }
 }
+
+/* ARVI motion system — cinematic, restrained and brand-safe. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy .eyebrow { animation: arvi-rise .55s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-copy h1 { animation: arvi-rise .72s .08s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-copy .hero-lead { animation: arvi-rise .72s .16s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-copy .hero-actions { animation: arvi-rise .72s .24s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-copy .trust-row { animation: arvi-rise .72s .32s cubic-bezier(.2,.8,.2,1) both; }
+
+  .mascot-stage { animation: arvi-stage-in .9s .12s cubic-bezier(.2,.8,.2,1) both, arvi-stage-glow 8s 1.1s ease-in-out infinite alternate; }
+  .mascot-image { animation: arvi-mascot-float 5.8s 1s ease-in-out infinite; }
+  .stage-chip.one { animation: arvi-chip-in .65s .55s cubic-bezier(.2,.8,.2,1) both, arvi-chip-float 5.6s 1.4s ease-in-out infinite; }
+  .stage-chip.two { animation: arvi-chip-in .65s .72s cubic-bezier(.2,.8,.2,1) both, arvi-chip-float 6.2s 1.8s ease-in-out infinite reverse; }
+  .stage-chip.three { animation: arvi-chip-in .65s .9s cubic-bezier(.2,.8,.2,1) both, arvi-chip-float 5.2s 2.1s ease-in-out infinite; }
+  .mascot-label::before { animation: arvi-status-pulse 2.2s ease-out infinite; }
+
+  .flow-arrow { animation: arvi-arrow-pulse 1.9s ease-in-out infinite; }
+  .flow-arrow:nth-of-type(4) { animation-delay:.18s; }
+  .flow-arrow:nth-of-type(6) { animation-delay:.36s; }
+
+  .page-hero,
+  .article-hero { background-size: 140% 140%; animation: arvi-dark-drift 12s ease-in-out infinite alternate; }
+  .page-hero .copy,
+  .article-hero .copy { animation: arvi-rise .72s cubic-bezier(.2,.8,.2,1) both; }
+
+  .cta-box { animation: arvi-cta-breathe 9s ease-in-out infinite alternate; }
+
+  @supports (animation-timeline: view()) {
+    .section-heading,
+    .proof-item,
+    .card,
+    .sector-grid > a,
+    .flow-item,
+    .case-band,
+    .steps li,
+    .journey article,
+    .process-step,
+    .faq article,
+    .pricing-card,
+    .conversation-card,
+    .roi-panel,
+    .monthly-card,
+    .plan {
+      animation-name: arvi-scroll-reveal;
+      animation-duration: 1ms;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 8% cover 28%;
+    }
+
+    .cards > :nth-child(2),
+    .sector-grid > :nth-child(2),
+    .journey > :nth-child(2),
+    .steps > :nth-child(2) { animation-range: entry 12% cover 31%; }
+    .cards > :nth-child(3),
+    .sector-grid > :nth-child(3),
+    .journey > :nth-child(3),
+    .steps > :nth-child(3) { animation-range: entry 16% cover 34%; }
+    .cards > :nth-child(4),
+    .sector-grid > :nth-child(4),
+    .journey > :nth-child(4),
+    .steps > :nth-child(4) { animation-range: entry 20% cover 37%; }
+    .cards > :nth-child(5),
+    .journey > :nth-child(5),
+    .steps > :nth-child(5) { animation-range: entry 24% cover 40%; }
+    .cards > :nth-child(6) { animation-range: entry 28% cover 43%; }
+  }
+}
+
+.topbar { transition: box-shadow .28s ease, background .28s ease, border-color .28s ease; }
+.topbar:hover { box-shadow: 0 10px 28px rgba(0,58,112,.06); }
+.nav-links a { position:relative; transition:color .2s ease; }
+.nav-links a::after { content:""; position:absolute; left:0; right:100%; bottom:-8px; height:2px; border-radius:2px; background:linear-gradient(90deg,var(--arvi-cyan),var(--arvi-green)); transition:right .25s ease; }
+.nav-links a:hover::after { right:0; }
+
+.button { position:relative; overflow:hidden; isolation:isolate; }
+.button::after { content:""; position:absolute; inset:-2px; z-index:-1; background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.34) 46%,transparent 72%); translate:-130% 0; transition:translate .62s cubic-bezier(.2,.8,.2,1); }
+.button:hover::after { translate:130% 0; }
+
+.hero::before { content:""; position:absolute; inset:-20% -8%; pointer-events:none; opacity:.55; background:radial-gradient(circle at 22% 34%,rgba(34,197,94,.08),transparent 18%),radial-gradient(circle at 68% 58%,rgba(6,182,212,.08),transparent 22%); filter:blur(6px); }
+.hero h1 .action-emphasis,
+.hero h1 > span { background:linear-gradient(90deg,var(--arvi-green),#45D77A,var(--arvi-cyan)); background-size:180% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+.mascot-stage { transition:box-shadow .35s ease, translate .35s ease; background-size:125% 125%; }
+.mascot-stage:hover { translate:0 -3px; box-shadow:0 30px 78px rgba(0,58,112,.18); }
+.mascot-stage::before { background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:32px 32px; mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 88%); }
+.stage-chip { transition:border-color .24s ease, background .24s ease, box-shadow .24s ease; }
+.stage-chip:hover { background:rgba(11,20,36,.88); border-color:rgba(255,255,255,.25); box-shadow:0 20px 42px rgba(0,0,0,.2); }
+
+.card,
+.sector-grid > a,
+.steps li,
+.journey article,
+.process-step,
+.faq article,
+.pricing-card,
+.conversation-card,
+.roi-panel,
+.monthly-card,
+.plan { transition:translate .24s ease, transform .24s ease, box-shadow .24s ease, border-color .24s ease; }
+.card:hover,
+.sector-grid > a:hover,
+.steps li:hover,
+.journey article:hover,
+.process-step:hover,
+.faq article:hover,
+.pricing-card:hover,
+.conversation-card:hover,
+.roi-panel:hover,
+.monthly-card:hover,
+.plan:hover { translate:0 -5px; border-color:rgba(0,58,112,.22); box-shadow:0 20px 48px rgba(0,58,112,.1); }
+.dark-section .flow-item:hover { translate:0 -4px; border-color:rgba(6,182,212,.32); box-shadow:0 18px 42px rgba(0,0,0,.16); }
+.service-card b { transition:letter-spacing .22s ease, color .22s ease; }
+.service-card:hover b { letter-spacing:.015em; color:var(--arvi-cyan); }
+.card-number,
+.service-kicker { transition:transform .22s ease, background .22s ease, color .22s ease; }
+.card:hover .card-number,
+.service-card:hover .service-kicker { transform:translateY(-2px); background:var(--cyan-soft); color:var(--arvi-blue); }
+
+.dark-section::before { content:""; position:absolute; width:420px; height:420px; right:-170px; top:18%; border-radius:50%; pointer-events:none; background:rgba(34,197,94,.055); filter:blur(10px); }
+.case-visual::after { transition:scale .55s cubic-bezier(.2,.8,.2,1), opacity .55s ease; }
+.case-band:hover .case-visual::after { scale:1.28; opacity:.9; }
+.cta-box::after { content:""; position:absolute; width:380px; height:380px; right:-180px; top:-210px; border-radius:50%; background:rgba(6,182,212,.11); filter:blur(4px); pointer-events:none; }
+
+@keyframes arvi-rise {
+  from { opacity:0; translate:0 24px; }
+  to { opacity:1; translate:0 0; }
+}
+@keyframes arvi-stage-in {
+  from { opacity:0; translate:28px 18px; scale:.97; }
+  to { opacity:1; translate:0 0; scale:1; }
+}
+@keyframes arvi-stage-glow {
+  0% { background-position:0% 15%; box-shadow:0 22px 58px rgba(0,58,112,.12); }
+  100% { background-position:100% 85%; box-shadow:0 28px 76px rgba(0,58,112,.18); }
+}
+@keyframes arvi-mascot-float {
+  0%,100% { translate:0 0; }
+  50% { translate:0 -10px; }
+}
+@keyframes arvi-chip-in {
+  from { opacity:0; scale:.94; translate:0 14px; }
+  to { opacity:1; scale:1; translate:0 0; }
+}
+@keyframes arvi-chip-float {
+  0%,100% { translate:0 0; }
+  50% { translate:0 -6px; }
+}
+@keyframes arvi-status-pulse {
+  0% { box-shadow:0 0 0 0 rgba(34,197,94,.28); }
+  70%,100% { box-shadow:0 0 0 10px rgba(34,197,94,0); }
+}
+@keyframes arvi-arrow-pulse {
+  0%,100% { opacity:.45; translate:0 0; }
+  50% { opacity:1; translate:3px 0; }
+}
+@keyframes arvi-dark-drift {
+  0% { background-position:0% 20%; }
+  100% { background-position:100% 80%; }
+}
+@keyframes arvi-cta-breathe {
+  0% { box-shadow:0 0 0 rgba(0,58,112,0); }
+  100% { box-shadow:0 30px 78px rgba(0,58,112,.16); }
+}
+@keyframes arvi-scroll-reveal {
+  from { opacity:.18; translate:0 34px; filter:blur(5px); }
+  to { opacity:1; translate:0 0; filter:blur(0); }
+}
+
+@media (max-width:980px) {
+  .flow-arrow { animation-name:none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  .mascot-stage:hover,
+  .card:hover,
+  .sector-grid > a:hover,
+  .steps li:hover,
+  .journey article:hover,
+  .process-step:hover,
+  .faq article:hover,
+  .pricing-card:hover,
+  .conversation-card:hover,
+  .roi-panel:hover,
+  .monthly-card:hover,
+  .plan:hover { translate:0 0; }
+}
+
+/* Floating ARVI contact bubble. It reuses each page's contextual WhatsApp CTA. */
+.topbar a.button-primary[href^="https://wa.me/573183074381"] { overflow:visible; }
+.topbar a.button-primary[href^="https://wa.me/573183074381"]::before {
+  content:"Hablar con ARVI";
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  width:auto;
+  min-width:176px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  padding:0 18px 0 58px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  color:#fff;
+  background-image:var(--isotipo-url),linear-gradient(135deg,var(--tech-950),var(--arvi-blue));
+  background-size:34px 34px,100% 100%;
+  background-position:12px center,center;
+  background-repeat:no-repeat,no-repeat;
+  font-family:"Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:0;
+  box-shadow:0 18px 48px rgba(0,58,112,.30),0 0 0 1px rgba(34,197,94,.08);
+  opacity:1;
+  translate:0 0;
+  transition:translate .22s ease,box-shadow .22s ease;
+}
+.topbar a.button-primary[href^="https://wa.me/573183074381"]:hover::before {
+  translate:0 -4px;
+  box-shadow:0 24px 58px rgba(0,58,112,.38),0 0 0 4px rgba(34,197,94,.08);
+}
+@media (prefers-reduced-motion:no-preference) {
+  .topbar a.button-primary[href^="https://wa.me/573183074381"]::before { animation:arvi-bubble-in .55s .8s cubic-bezier(.2,.8,.2,1) both; }
+}
+@keyframes arvi-bubble-in {
+  from { opacity:0; translate:0 18px; }
+  to { opacity:1; translate:0 0; }
+}
+@media (max-width:640px) {
+  .topbar a.button-primary[href^="https://wa.me/573183074381"]::before {
+    content:"";
+    right:14px;
+    bottom:14px;
+    width:58px;
+    min-width:58px;
+    height:58px;
+    padding:0;
+    background-size:36px 36px,100% 100%;
+    background-position:center,center;
+  }
+}
