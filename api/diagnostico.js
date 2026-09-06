@@ -14,12 +14,14 @@ module.exports = async function handler(request, response) {
     const brandHead = [
       '<link rel="canonical" href="https://arvi.rohigroup.co/diagnostico">',
       '<link rel="stylesheet" href="/diagnostico-brand.css">',
+      '<script src="/web-chat-loader.js" defer></script>',
     ].join('');
 
     html = html.replace('</head>', `${brandHead}</head>`);
 
     response.setHeader('Content-Type', 'text/html; charset=utf-8');
     response.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    response.setHeader('X-ARVI-WebChat', 'v1');
     if (request.method === 'HEAD') return response.status(200).end();
     return response.status(200).send(html);
   } catch (error) {
