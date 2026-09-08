@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08101D">
+<meta name="robots" content="noindex,nofollow">
+<title>ARVI · Configuración operativa</title>
+<meta name="description" content="Formulario de levantamiento operativo para configurar ARVI según los servicios, reglas, pagos, agenda, seguimiento y handoff de cada organización.">
+<link rel="canonical" href="https://arvi.rohigroup.co/configuracion">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/configuracion.css">
+<script src="/configuracion.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="wrap topin"><div><div class="brand">ARVI</div><div class="tag">Configuración operativa</div></div><div class="tag">Tu operación define las reglas. ARVI no las inventa.</div></div></header>
+<main class="wrap">
+<section class="hero"><div><div class="ey">Levantamiento operativo · ARVI</div><h1>Convirtamos tu operación en <span class="grad">reglas claras</span>.</h1><p>Este formulario recoge cómo vende, cobra, agenda, atiende y escala tu organización. Las respuestas se usarán para proponer la configuración de ARVI y detectar vacíos que deben resolverse antes de automatizar.</p></div><aside class="note"><strong>No necesitas tener todas las respuestas hoy.</strong><p>Los campos vacíos también nos sirven: muestran decisiones pendientes. Puedes guardar, continuar después y enviar cuando tengas una versión suficientemente completa.</p></aside></section>
+<form id="f" class="card" novalidate>
+<div class="hiddenbot" aria-hidden="true"><label>Website<input id="website" tabindex="-1" autocomplete="off"></label></div>
+<div id="formui">
+<div class="head"><div class="stepmeta"><span id="sl">Paso 1 de 10</span><b id="st">Servicios y responsables</b></div><div><div class="bar"><div class="fill" id="fill"></div></div><div class="pct" id="pct">10% de secciones</div></div></div>
+<div class="body">
+<div class="err" id="err"></div>
+<div class="identity" id="identity">
+  <div class="field"><label for="org">Organización / proyecto</label><input id="org" data-field required maxlength="240" placeholder="Nombre de la organización"></div>
+  <div class="field"><label for="owner">Responsable del levantamiento</label><input id="owner" data-field required maxlength="240" placeholder="Nombre y cargo"></div>
+  <div class="field"><label for="version">Fecha / versión <span class="optional">(opcional)</span></label><input id="version" data-field maxlength="120" placeholder="Ej. Septiembre 2026 · V1"></div>
+</div>
+<div id="screen"></div>
+<div class="recovery" id="recovery"><strong>Enlace privado para continuar después</strong><p>Guárdalo o envíatelo a ti mismo. Quien tenga este enlace puede abrir este borrador; no lo publiques ni lo compartas fuera del equipo.</p><div class="recovery-row"><input id="recoveryLink" readonly><button type="button" class="copy" id="copyRecovery">Copiar enlace</button></div></div>
+<div class="actions">
+  <div class="action-left"><button type="button" class="draft" id="save">Guardar borrador</button><button type="button" class="later" id="later">Continuar después</button></div>
+  <div class="action-right"><button type="button" class="prev" id="prev" hidden>Anterior</button><button type="button" class="next" id="next">Siguiente</button><button type="submit" class="send" id="send" hidden>Enviar formulario</button></div>
+</div>
+<div class="status" id="status"><span class="dot"></span><span id="statusText">Borrador nuevo · aún no guardado</span></div>
+<p class="privacy">No compartas contraseñas, credenciales, datos bancarios sensibles ni información personal innecesaria. ARVI utilizará estas respuestas únicamente como insumo operativo para el levantamiento y análisis de configuración.</p>
+</div></div>
+<section class="success" id="success"><div class="ok">✓</div><div class="ey">Configuración recibida</div><h2>Ya tenemos una versión para analizar.</h2><p>ARVI podrá identificar reglas definidas, vacíos, contradicciones y decisiones que requieren validación humana antes de convertir este levantamiento en configuración operativa.</p><div class="recap" id="recap"></div></section>
+</form>
+<div class="footer">ARVI · Automatiza y vive. · Formulario de configuración operativa</div>
+</main>
+</body>
+</html>

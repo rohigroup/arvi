@@ -18,6 +18,7 @@ const ALLOWED_FILES = new Set([
   'precios.html',
   'calculadora-roi.html',
   'links.html',
+  'configuracion.html',
 ]);
 
 const LOADER = '<script src="/web-chat-loader.js" defer></script>';
