@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F8FAFC" />
+  <title>Diagnóstico Express ARVI | Detecta qué conversaciones te cuestan tiempo o clientes</title>
+  <meta name="description" content="Responde 6 preguntas y detecta las 3 conversaciones o procesos donde tu negocio puede estar perdiendo tiempo, seguimiento u oportunidades. Sin fórmulas ni jerga técnica." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://arvi.rohigroup.co/diagnostico-express" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ARVI" />
+  <meta property="og:title" content="Diagnóstico Express ARVI" />
+  <meta property="og:description" content="6 preguntas. 3 oportunidades concretas para mejorar atención, agenda, seguimiento u operación." />
+  <meta property="og:url" content="https://arvi.rohigroup.co/diagnostico-express" />
+  <meta property="og:image" content="https://res.cloudinary.com/dmh6nxvur/image/upload/v1788451872/arvi/brand/arvi-mascota.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/site.css" />
+  <style>
+    .dx-shell{background:var(--premium-white)}
+    .dx-hero{padding:86px 0 54px;color:var(--white);background:radial-gradient(circle at 82% 20%,rgba(124,58,237,.24),transparent 25%),radial-gradient(circle at 12% 100%,rgba(6,182,212,.18),transparent 28%),var(--tech-950)}
+    .dx-hero .copy{width:min(900px,100%)}
+    .dx-hero h1{max-width:900px;margin:0;font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(42px,6vw,70px);line-height:1.05;letter-spacing:-.03em}
+    .dx-hero h1 span{color:var(--arvi-green)}
+    .dx-hero p{max-width:760px;margin:22px 0 0;color:#C8D9E9;font-size:18px;line-height:1.72}
+    .dx-privacy{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .dx-privacy span{padding:8px 11px;border:1px solid rgba(255,255,255,.16);border-radius:999px;color:#DCEAF5;font-size:12px}
+    .dx-main{padding:68px 0 90px}
+    .dx-form{width:min(920px,100%);margin:0 auto;padding:30px;border:1px solid var(--line);border-radius:28px;background:var(--white);box-shadow:var(--shadow-md)}
+    .dx-intro{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+    .dx-intro h2{margin:0;font-family:"Plus Jakarta Sans",sans-serif;font-size:30px;letter-spacing:-.02em}
+    .dx-intro p{max-width:430px;margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .dx-question{padding:22px 0;border-bottom:1px solid var(--line)}
+    .dx-question:last-of-type{border-bottom:0}
+    .dx-question legend{padding:0;font-family:"Plus Jakarta Sans",sans-serif;font-size:17px;font-weight:800;line-height:1.4}
+    .dx-number{display:inline-grid;width:30px;height:30px;margin-right:8px;place-items:center;border-radius:50%;color:var(--arvi-blue);background:var(--blue-soft);font:700 11px "JetBrains Mono",monospace}
+    .dx-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}
+    .dx-option{position:relative;display:flex;gap:10px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:15px;background:var(--premium-white);cursor:pointer;transition:.18s ease}
+    .dx-option:hover{border-color:rgba(0,58,112,.32);box-shadow:var(--shadow-sm)}
+    .dx-option input{margin-top:3px;accent-color:var(--arvi-green)}
+    .dx-option span{color:var(--tech-700);font-size:13px;line-height:1.5}
+    .dx-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:28px}
+    .dx-error{display:none;margin-top:18px;padding:13px 15px;border:1px solid #fecaca;border-radius:14px;color:#991b1b;background:#fef2f2;font-size:13px}
+    .dx-error.show{display:block}
+    .dx-results{display:none;width:min(920px,100%);margin:0 auto}
+    .dx-results.show{display:block}
+    .dx-result-head{padding:30px;border-radius:28px;color:var(--white);background:linear-gradient(145deg,var(--tech-950),var(--arvi-blue));box-shadow:var(--shadow-md)}
+    .dx-result-head h2{margin:8px 0 10px;font-family:"Plus Jakarta Sans",sans-serif;font-size:clamp(32px,5vw,48px);line-height:1.08;letter-spacing:-.025em}
+    .dx-result-head p{max-width:720px;margin:0;color:#C8D9E9;line-height:1.65}
+    .dx-level{display:inline-flex;padding:7px 10px;border-radius:999px;color:#07160C;background:var(--arvi-green);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .dx-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .dx-card{padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--white);box-shadow:var(--shadow-sm)}
+    .dx-card small{color:var(--arvi-blue);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .dx-card h3{margin:12px 0 8px;font-family:"Plus Jakarta Sans",sans-serif;font-size:20px}
+    .dx-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .dx-next{margin-top:20px;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--tech-100)}
+    .dx-next h3{margin:0 0 8px;font-family:"Plus Jakarta Sans",sans-serif;font-size:24px}
+    .dx-next p{margin:0;color:var(--muted);line-height:1.65}
+    .dx-next .hero-actions{margin-top:20px}
+    @media(max-width:760px){.dx-form{padding:22px}.dx-intro{display:block}.dx-intro p{margin-top:10px}.dx-options,.dx-cards{grid-template-columns:1fr}.dx-actions{justify-content:stretch}.dx-actions .button{width:100%}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Diagnóstico Express ARVI",
+    "url":"https://arvi.rohigroup.co/diagnostico-express",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Web",
+    "description":"Herramienta gratuita de ARVI para identificar oportunidades de automatización en atención, agenda, seguimiento y procesos empresariales."
+  }
+  </script>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="/#como-funciona">Cómo funciona</a>
+      <a href="/#soluciones">Soluciones</a>
+      <a href="/recursos">Recursos</a>
+      <a href="/diagnostico">Diagnóstico completo</a>
+    </nav>
+    <a class="button button-small button-primary" href="https://wa.me/573183074381?text=Hola%2C%20quiero%20revisar%20mi%20proceso%20con%20ARVI." rel="noopener">Hablar con ARVI</a>
+  </div>
+</header>
+
+<main class="dx-shell">
+  <section class="dx-hero">
+    <div class="container copy">
+      <p class="eyebrow">Diagnóstico Express · 6 preguntas</p>
+      <h1>¿Dónde estás perdiendo <span>tiempo o clientes</span> en tus conversaciones?</h1>
+      <p>No necesitas saber de inteligencia artificial. Cuéntanos cómo atiendes, agendas y haces seguimiento hoy. ARVI te mostrará tres oportunidades concretas para ordenar o automatizar.</p>
+      <div class="dx-privacy">
+        <span>Sin registro</span><span>Sin datos de contacto</span><span>No guardamos tus respuestas</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="dx-main">
+    <div class="container">
+      <form id="dxForm" class="dx-form" novalidate>
+        <div class="dx-intro">
+          <h2>Responde según lo que pasa hoy.</h2>
+          <p>No busques la respuesta “correcta”. El objetivo es detectar fricción operativa, no darte una nota de madurez digital.</p>
+        </div>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">01</span>Cuando un cliente escribe, ¿cuánto puede tardar en recibir una primera respuesta?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q1" value="0" required><span>Normalmente menos de 5 minutos.</span></label>
+            <label class="dx-option"><input type="radio" name="q1" value="1"><span>Entre 5 y 30 minutos.</span></label>
+            <label class="dx-option"><input type="radio" name="q1" value="2"><span>Entre 30 minutos y 2 horas.</span></label>
+            <label class="dx-option"><input type="radio" name="q1" value="3"><span>Más de 2 horas o a veces hasta el día siguiente.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">02</span>¿Cuánto de lo que responde tu equipo se repite?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q2" value="0" required><span>Muy poco: casi cada caso es diferente.</span></label>
+            <label class="dx-option"><input type="radio" name="q2" value="1"><span>Algunas preguntas o confirmaciones se repiten.</span></label>
+            <label class="dx-option"><input type="radio" name="q2" value="2"><span>Una parte importante son preguntas y pasos repetitivos.</span></label>
+            <label class="dx-option"><input type="radio" name="q2" value="3"><span>La mayoría del día se va en responder o confirmar lo mismo.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">03</span>¿Dónde queda la historia del cliente y el siguiente paso?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q3" value="0" required><span>En un sistema centralizado que el equipo sí usa.</span></label>
+            <label class="dx-option"><input type="radio" name="q3" value="1"><span>En una hoja, agenda o sistema separado del chat.</span></label>
+            <label class="dx-option"><input type="radio" name="q3" value="2"><span>Repartida entre chats, hojas y notas.</span></label>
+            <label class="dx-option"><input type="radio" name="q3" value="3"><span>Principalmente en WhatsApp y en la memoria de quien atendió.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">04</span>¿Tu negocio maneja citas, reservas, visitas o espacios de agenda?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q4" value="0" required><span>No es una parte relevante de nuestra operación.</span></label>
+            <label class="dx-option"><input type="radio" name="q4" value="1"><span>Sí, pero ya tenemos un sistema ordenado y actualizado.</span></label>
+            <label class="dx-option"><input type="radio" name="q4" value="2"><span>Sí, parte está sistematizada y parte se coordina manualmente.</span></label>
+            <label class="dx-option"><input type="radio" name="q4" value="3"><span>Sí, gran parte se confirma o reprograma manualmente por WhatsApp.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">05</span>Si alguien pregunta, cotiza o muestra interés y no compra de inmediato, ¿qué pasa?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q5" value="0" required><span>Tenemos un seguimiento definido y sabemos quién lo ejecuta.</span></label>
+            <label class="dx-option"><input type="radio" name="q5" value="1"><span>Hacemos seguimiento, pero no siempre de forma consistente.</span></label>
+            <label class="dx-option"><input type="radio" name="q5" value="2"><span>Depende de que alguien recuerde escribirle.</span></label>
+            <label class="dx-option"><input type="radio" name="q5" value="3"><span>Normalmente la conversación se enfría y no volvemos a contactarlo.</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="dx-question">
+          <legend><span class="dx-number">06</span>Después de una compra, cita o servicio, ¿cómo mantienen activa la relación?</legend>
+          <div class="dx-options">
+            <label class="dx-option"><input type="radio" name="q6" value="0" required><span>Hay recordatorios, seguimiento o reactivación definidos.</span></label>
+            <label class="dx-option"><input type="radio" name="q6" value="1"><span>Existe para algunos clientes o procesos.</span></label>
+            <label class="dx-option"><input type="radio" name="q6" value="2"><span>Se hace manualmente cuando hay tiempo.</span></label>
+            <label class="dx-option"><input type="radio" name="q6" value="3"><span>No tenemos un sistema de seguimiento postventa o reactivación.</span></label>
+          </div>
+        </fieldset>
+
+        <div id="dxError" class="dx-error">Responde las seis preguntas para generar tu diagnóstico.</div>
+        <div class="dx-actions">
+          <button class="button button-primary" type="submit">Ver mis 3 oportunidades</button>
+        </div>
+      </form>
+
+      <section id="dxResults" class="dx-results" aria-live="polite">
+        <div class="dx-result-head">
+          <span id="dxLevel" class="dx-level">Resultado</span>
+          <h2>Tus 3 oportunidades más claras.</h2>
+          <p id="dxSummary"></p>
+        </div>
+        <div id="dxCards" class="dx-cards"></div>
+        <div class="dx-next">
+          <h3>El siguiente paso no es automatizar todo.</h3>
+          <p>Conviene validar volumen, reglas, excepciones, datos y control humano antes de implementar. Puedes hacer el diagnóstico económico-operativo completo o revisar tu caso directamente con ARVI.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/diagnostico">Hacer diagnóstico completo</a>
+            <a class="button button-secondary" href="https://wa.me/573183074381?text=Hola%2C%20hice%20el%20Diagn%C3%B3stico%20Express%20de%20ARVI%20y%20quiero%20revisar%20mis%203%20oportunidades." rel="noopener">Revisarlo con ARVI</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><a class="brand" href="/" aria-label="ARVI inicio"><span>ARVI</span></a><p>Tecnología amable para negocios reales. Una marca de Rohi Group S.A.S.</p></div>
+    <div><strong>Soluciones</strong><a href="/chatbot-whatsapp-ia">WhatsApp + IA</a><a href="/automatizacion-procesos">Automatización</a><a href="/sectores/belleza">ARVI Agenda</a></div>
+    <div><strong>Aprende</strong><a href="/recursos">Recursos</a><a href="/calculadora-roi">Calculadora ROI</a><a href="/diagnostico">Diagnóstico completo</a></div>
+    <div><strong>Contacto</strong><a href="https://wa.me/573183074381">WhatsApp</a><a href="mailto:rohigroupsas@gmail.com">rohigroupsas@gmail.com</a><span>Valledupar, Colombia</span></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 ARVI · Rohi Group S.A.S.</span><span>Automatiza y vive.</span></div>
+</footer>
+
+<script>
+(() => {
+  const form = document.getElementById('dxForm');
+  const error = document.getElementById('dxError');
+  const results = document.getElementById('dxResults');
+  const cards = document.getElementById('dxCards');
+  const level = document.getElementById('dxLevel');
+  const summary = document.getElementById('dxSummary');
+
+  const opportunities = {
+    atencion: {
+      title: 'Atención inicial',
+      copy: 'Reducir tiempos de primera respuesta y absorber preguntas repetitivas sin dejar al cliente esperando.'
+    },
+    organizacion: {
+      title: 'Historia y contexto',
+      copy: 'Centralizar lo que pasó, qué necesita el cliente y cuál es el siguiente paso para que la operación no dependa de memoria.'
+    },
+    agenda: {
+      title: 'Agenda y confirmaciones',
+      copy: 'Conectar disponibilidad, confirmaciones, reprogramaciones y recordatorios con reglas reales del negocio.'
+    },
+    seguimiento: {
+      title: 'Seguimiento comercial',
+      copy: 'Crear un proceso consistente para oportunidades que no compran de inmediato y evitar que los chats se enfríen.'
+    },
+    reactivacion: {
+      title: 'Postventa y reactivación',
+      copy: 'Mantener continuidad después de la compra o servicio con recordatorios, seguimiento y oportunidades de regreso.'
+    },
+    automatizacion: {
+      title: 'Automatización operativa',
+      copy: 'Conectar conversaciones con acciones repetitivas para que el equipo intervenga donde sí hace falta criterio.'
+    }
+  };
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const values = [1,2,3,4,5,6].map(n => data.get(`q${n}`));
+    if (values.some(v => v === null)) {
+      error.classList.add('show');
+      return;
+    }
+    error.classList.remove('show');
+
+    const [q1,q2,q3,q4,q5,q6] = values.map(Number);
+    const scores = {
+      atencion: q1 * 2 + q2,
+      organizacion: q3 * 2 + q2,
+      agenda: q4 * 3,
+      seguimiento: q5 * 2 + q1,
+      reactivacion: q6 * 2 + q5,
+      automatizacion: q2 + q3 + q5 + q6
+    };
+
+    const ranked = Object.entries(scores).sort((a,b) => b[1] - a[1]).slice(0,3);
+    const total = q1 + q2 + q3 + q4 + q5 + q6;
+    const label = total >= 13 ? 'Fricción alta' : total >= 7 ? 'Fricción media' : 'Fricción controlada';
+    const text = total >= 13
+      ? 'Hay varios puntos donde conversaciones, seguimiento y tareas manuales pueden estar drenando capacidad del equipo. Prioriza un solo flujo y mide antes de ampliar.'
+      : total >= 7
+        ? 'Tu operación ya tiene algo de estructura, pero todavía hay puntos donde una conversación puede perder contexto o depender demasiado de trabajo manual.'
+        : 'Tu operación parece bastante ordenada. Antes de automatizar por automatizar, conviene revisar integraciones y casos concretos donde exista volumen suficiente.';
+
+    level.textContent = label;
+    summary.textContent = text;
+    cards.innerHTML = ranked.map(([key], index) => {
+      const item = opportunities[key];
+      return `<article class="dx-card"><small>Oportunidad ${index + 1}</small><h3>${item.title}</h3><p>${item.copy}</p></article>`;
+    }).join('');
+
+    form.style.display = 'none';
+    results.classList.add('show');
+    results.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+</script>
+</body>
+</html>

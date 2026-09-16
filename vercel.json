@@ -52,6 +52,16 @@
       "permanent": true
     },
     {
+      "source": "/automatizacion-whatsapp-valledupar.html",
+      "destination": "/automatizacion-whatsapp-valledupar",
+      "permanent": true
+    },
+    {
+      "source": "/diagnostico-express.html",
+      "destination": "/diagnostico-express",
+      "permanent": true
+    },
+    {
       "source": "/sectores-belleza.html",
       "destination": "/sectores/belleza",
       "permanent": true
@@ -62,12 +72,12 @@
       "permanent": true
     },
     {
-      "source": "/sectores/consultorios.html",
+      "source": "/sectores-consultorios.html",
       "destination": "/sectores/consultorios",
       "permanent": true
     },
     {
-      "source": "/sectores/pymes.html",
+      "source": "/sectores-pymes.html",
       "destination": "/sectores/pymes",
       "permanent": true
     },
@@ -159,6 +169,14 @@
     {
       "source": "/automatizacion-procesos",
       "destination": "/api/page?file=automatizacion-procesos.html"
+    },
+    {
+      "source": "/automatizacion-whatsapp-valledupar",
+      "destination": "/api/page?file=automatizacion-whatsapp-valledupar.html"
+    },
+    {
+      "source": "/diagnostico-express",
+      "destination": "/api/page?file=diagnostico-express.html"
     },
     {
       "source": "/sectores/belleza",

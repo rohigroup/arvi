@@ -6,6 +6,8 @@ const ALLOWED_FILES = new Set([
   'chatbot-whatsapp-ia.html',
   'agentes-ia.html',
   'automatizacion-procesos.html',
+  'automatizacion-whatsapp-valledupar.html',
+  'diagnostico-express.html',
   'sectores-belleza.html',
   'sectores-hoteles.html',
   'sectores/consultorios.html',

@@ -6,14 +6,24 @@ Sitio comercial y de posicionamiento orgánico de ARVI, la línea de automatizac
 
 La raíz `arvi.rohigroup.co` funciona como sitio comercial e indexable. La arquitectura busca que personas, buscadores y sistemas de IA puedan entender con claridad qué es ARVI, qué problemas resuelve y en qué categorías compite.
 
+## Posicionamiento
+
+Promesa principal:
+
+**ARVI convierte conversaciones en acciones.**
+
+La marca se presenta como una plataforma de automatización empresarial que conecta atención, contactos, agenda, seguimiento y procesos con IA y control humano. El mensaje público debe evitar reducir ARVI a “un bot” o a una automatización aislada.
+
 ## Rutas comerciales
 
 - `/` — home comercial y entidad principal de ARVI.
 - `/chatbot-whatsapp-ia` — automatización conversacional y agentes IA para WhatsApp.
 - `/agentes-ia` — agentes de inteligencia artificial para procesos empresariales.
 - `/automatizacion-procesos` — automatización e integración de procesos.
+- `/automatizacion-whatsapp-valledupar` — landing local para automatización de WhatsApp e IA en Valledupar.
 - `/agente` — landing comercial existente de ARVI Agente IA.
-- `/diagnostico` — herramienta de diagnóstico.
+- `/diagnostico-express` — diagnóstico de baja fricción: 6 preguntas, sin registro ni persistencia de respuestas.
+- `/diagnostico` — diagnóstico económico-operativo profundo.
 - `/links` — hub del ecosistema ARVI, preservado para bio y accesos rápidos.
 
 ## Web Chat ARVI V1
@@ -54,10 +64,12 @@ WhatsApp queda como handoff opcional, no como transporte principal de la bubble.
 ## SEO
 
 - `robots.txt` expone el sitemap.
-- `sitemap.xml` lista las rutas indexables iniciales.
+- `sitemap.xml` lista las rutas indexables.
 - La home incluye datos estructurados `Organization`, `WebSite` y `Service`.
 - Las páginas de servicio tienen canonical, metadatos específicos y schema de servicio.
 - La página de WhatsApp incluye además preguntas frecuentes visibles y `FAQPage` estructurado.
+- La landing `/automatizacion-whatsapp-valledupar` crea una entidad local explícita para consultas de automatización, WhatsApp e IA en Valledupar sin convertir la home nacional en una página local.
+- `/diagnostico-express` funciona como puerta de entrada de baja fricción y enlaza al diagnóstico económico-operativo cuando se necesita más profundidad.
 
 ## Dominios previstos
 
@@ -73,8 +85,7 @@ El Web Chat debe permanecer en PREPARE hasta que Control Hub tenga migraciones/c
 
 ## Próximas capas de posicionamiento
 
-1. Verticales: belleza, hotelería, consultorios y PYMES.
-2. Casos de uso y casos reales publicables.
-3. Centro de recursos y contenido editorial.
-4. Calculadora de retorno de automatización.
-5. Search Console, medición de consultas y mejoras por datos reales.
+1. Casos reales publicables con métricas verificadas.
+2. Centro de recursos y contenido editorial.
+3. Search Console, medición de consultas y mejoras por datos reales.
+4. Profundizar verticales cuando exista evidencia comercial suficiente.
