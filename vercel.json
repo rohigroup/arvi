@@ -129,6 +129,16 @@
   ],
   "rewrites": [
     {
+      "source": "/api/payments/:provider/confirmation/:alias",
+      "has": [
+        {
+          "type": "host",
+          "value": "arvi.rohigroup.co"
+        }
+      ],
+      "destination": "https://app.rohigroup.co/api/payments/:provider/confirmation/:alias"
+    },
+    {
       "source": "/",
       "has": [
         {
